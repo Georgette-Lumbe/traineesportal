@@ -1,20 +1,24 @@
 {% extends 'base.html' %} 
+{% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
 
 <div class="container">
     <div class="row">
+        {% for note in notes %}
         <div class="col-md-3">
             <a href="#">
                 <div class="card">
-                    <div class="card-header">Title</div>
-                    <div class="card-body">Description</div>
+                    <div class="card-header">{{note.title}}</div>
+                    <!-- slice:"0:100, display only 0 to 100 characters s-->
+                    <div class="card-body">{{note.description|slice:"0:100"}}</div>
                     <div class="card-footer mt-auto "><a href="#">
                         <i class="fa fa-trash fa-2x"></i></a>
                     </div>
                 </div>
             </a>
         </div>
+        {% endfor %}
 
         <br><br>
 
@@ -26,6 +30,7 @@
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Create Notes</legend>
         </fieldset>
+        {{form|crispy}}
         <div class="form-group">
             <button href="" class="btn btn-outline-info" type="submit">
                 Create

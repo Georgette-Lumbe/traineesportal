@@ -6,11 +6,12 @@ from django.contrib.auth.models import User
 
 class Notes(models.Model):
     """
-    Note Database Structure
+    Notes Database Structure
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField()
+    objects = models.Manager()
 
     def __str__(self):
         return self.title  # Display the notes title
