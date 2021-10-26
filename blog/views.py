@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def homelist(request):
     return render(request, 'index.html')
+
+
+def notesdetails(request):
+    return render(request, 'notes.html')
