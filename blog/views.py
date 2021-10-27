@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . forms import Notes, NotesForm
+from . forms import Notes, NotesForm, AssignmentForm
 from django.contrib import messages
 from django.views import generic
 from . models import Assignments
@@ -46,6 +46,7 @@ def assignments(request):
     """
     Create assignments view
     """
+    form = AssignmentForm()
     assignments = Assignments.objects.filter(user=request.user)
     # When to notify the all assignments finished msg
     if len(assignments) == 0:
@@ -53,5 +54,10 @@ def assignments(request):
     else:
         assignment_done = False
 
-    context = {'assignments': assignments, 'assignments_done': assignment_done}
+    context = {
+            'assignments': assignments,
+            'assignments_done': assignment_done,
+            'form': form
+    }
+
     return render(request, 'assignments.html', context)
