@@ -18,11 +18,14 @@ def notes(request):
     """
     Create notes view
     """
-    if request.method == "POST":  # When the save button is clicked
+    if request.method == 'POST':  # When the save button is clicked
         form = NotesForm(request.Post)
         if form.is_valid():  # If the value is valid
-            notes = Notes(user=request.user, title=request.POST['title'],
-                          description=request.POST['description'])
+            notes = Notes(
+                user=request.user,
+                title=request.POST['title'],
+                description=request.POST['description']
+            )
             notes.save()
             # Message when the note is added
             messages.success(request, f"Note from {request.user.username}"
@@ -95,7 +98,7 @@ def update_assignment(request, pk=None):
     """
         When user hits checkbox
         to mark assignment as completed
-        """
+    """
     assignments = Assignments.objects.get(id=pk)
     if assignments.is_finished is True:   # When user hits checkbox
         assignments.is_finished = False
@@ -145,3 +148,4 @@ def tasks(request):
                 'task_done': task_done
     }
     return render(request, 'tasks.html', context)
+

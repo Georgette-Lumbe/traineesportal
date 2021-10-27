@@ -27,7 +27,7 @@
                 <td>{{assignment.due}}</td>
 
                 <td>
-                    <a href="{% url 'update-assignment' assignment.id %}">
+                    <a href="{% url 'update_assignment' assignment.id %}">
                         <div class="form-check">
                             <!-- If the assignment is finished or not -->
                             {% if assignment.is_finished == True %}
@@ -55,13 +55,14 @@
         {% csrf_token %}  <!-- for not forbidden error -->
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Create assignment</legend>
-            {{form|crispy}}
+                {{form|crispy}}
         </fieldset>
         <div class="form-group">
             <button href="" class="btn btn-outline-info" type="submit">
-                Create
+                    Create
             </button>
         </div>
     </form>
+</div>
 </div>
 {% endblock content %}

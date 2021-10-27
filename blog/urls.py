@@ -11,10 +11,10 @@ urlpatterns = [
          name='notes-detail'),
 
     path('assignments', views.assignments, name='assignments'),  # Assignments
-    path('update_assignment/<int:pk>', views.update_assignment,
-         name='update-assignment'),
     path('delete_assignment/<int:pk>', views.delete_assignment,
          name='delete-assignment'),
+    path('update_assignment/<int:pk>', views.update_assignment,
+         name='update_assignment'),
 
-    path('tasks', views.tasks, name='task'),     # tasks URL
+    path('tasks', views.tasks, name='tasks'),     # tasks URL
 ]
