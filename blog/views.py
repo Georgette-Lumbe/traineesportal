@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from . forms import Notes, NotesForm, AssignmentForm
+from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from django.contrib import messages
 from django.views import generic
 from . models import Assignments, Tasks
@@ -111,7 +111,37 @@ def delete_assignment(request, pk=None):  # Delete assignment
 
 
 def tasks(request):
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            try:
+                finished = request.POST['is_finished']
+                if finished == 'on':
+                    finished = True
+                else:
+                    finished = False
+            except:
+                finished = False
+            tasks = Tasks(
+                user=request.user,
+                title=request.POST['title'],
+                is_finished=finished
+            )
+            tasks.save()  # Save to database
+            # Message when the assignment is added
+            messages.success(request, f"Task from {request.user.username}"
+                             " successfully added!")
+    else:
+        form = TaskForm()
+
     tasks = Tasks.objects.filter(user=request.user)  # Display title on table
-    form = NotesForm()
-    context = {'tasks': tasks, 'form': form}
+    if len(tasks) == 0:
+        task_done = True
+    else:
+        task_done = False
+    context = {
+                'tasks': tasks,
+                'form': form,
+                'task_done': task_done
+    }
     return render(request, 'tasks.html', context)

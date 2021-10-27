@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="container">
-
+    {% if not task_done %}
     <table class="table table-striped table-bordered table-hover table-dark">
         <thead>
             <tr>
@@ -39,7 +39,9 @@
             {% endfor %}
         </tbody>
     </table>
+    {% else %}
     <h4>All tasks have been done!! create to add more</h4>
+    {% endif %}
 </div><br><br>
 <div class="container">
     <form method="POST">
