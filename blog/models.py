@@ -38,3 +38,12 @@ class Assignments(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Tasks(models.Model):
+    """
+    Tasks Database Structure
+    """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    is_finished = models.BooleanField(default=False)
