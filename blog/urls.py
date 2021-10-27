@@ -10,4 +10,6 @@ urlpatterns = [
          name='notes-detail'),
 
     path('assignments', views.assignments, name='assignments'),
+    path('update_assignment/<int:pk>', views.update_assignment,
+         name='update-assignment'),
 ]

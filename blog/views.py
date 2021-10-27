@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . forms import Notes, NotesForm, AssignmentForm
 from django.contrib import messages
 from django.views import generic
@@ -20,7 +20,7 @@ def notes(request):
     """
     if request.method == "POST":  # When the save button is clicked
         form = NotesForm(request.Post)
-        if form.is_valid():
+        if form.is_valid():  # If the value is valid
             notes = Notes(user=request.user, title=request.POST['title'],
                           description=request.POST['description'])
             notes.save()
@@ -89,3 +89,13 @@ def assignments(request):
     }
 
     return render(request, 'assignments.html', context)
+
+
+def update_assignment(request, pk=None):  # When user hits checkbox
+    assignments = Assignments.objects.get(id=pk)
+    if assignments.is_finished is True:
+        assignments.is_finished = False
+    else:
+        assignments.is_finished = True
+    assignments.save()
+    return redirect('assignment')

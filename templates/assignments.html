@@ -27,7 +27,7 @@
                 <td>{{assignment.due}}</td>
 
                 <td>
-                    <a href="#">
+                    <a href="{% url 'update-assignment' assignment.id %}">
                         <div class="form-check">
                             <!-- If the assignment is finished or not -->
                             {% if assignment.is_finished == True %}
