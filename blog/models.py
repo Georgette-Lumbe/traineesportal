@@ -22,3 +22,16 @@ class Notes(models.Model):
         """
         verbose_name = 'notes'
         verbose_name_plural = 'notes'
+
+
+class Assignments(models.Model):
+    """
+    Assignments Database Structure
+    """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    subject = models.CharField(max_length=50)
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    due = models.DateTimeField()
+    is_finished = models.BooleanField(default=False)
+

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . forms import Notes, NotesForm
 from django.contrib import messages
-from django.views import generic, View
+from django.views import generic
 
 # Views
 
