@@ -34,4 +34,7 @@ class Assignments(models.Model):
     description = models.TextField()
     due = models.DateTimeField()
     is_finished = models.BooleanField(default=False)
+    objects = models.Manager()
 
+    def __str__(self):
+        return self.title

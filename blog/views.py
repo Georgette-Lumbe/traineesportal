@@ -2,6 +2,7 @@ from django.shortcuts import render
 from . forms import Notes, NotesForm
 from django.contrib import messages
 from django.views import generic
+from . models import Assignments
 
 # Views
 
@@ -39,3 +40,13 @@ def delete_note(request, pk=None):  # Delete note
 
 class NotesDetailView(generic.DetailView):
     model = Notes
+
+
+def assignments(request):
+    """
+    Create assignments view
+    """
+    assignments = Assignments.objects.filter(user=request.user)
+    context = {'assignemnts': assignments}
+    return render(request, 'assignments.html', context)
+
