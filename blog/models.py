@@ -36,7 +36,7 @@ class Assignments(models.Model):
     is_finished = models.BooleanField(default=False)
     objects = models.Manager()
 
-    def __str__(self):
+    def __str__(self):  # Display the assignments title
         return self.title
 
     class Meta:
@@ -54,6 +54,9 @@ class Tasks(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     is_finished = models.BooleanField(default=False)
+
+    def __str__(self):      # Display the tasks title
+        return self.title
 
     class Meta:
         """
