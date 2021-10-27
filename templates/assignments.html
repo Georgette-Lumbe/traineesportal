@@ -16,12 +16,13 @@
             </tr>
         </thead>
         <tbody>
+            {% for  assignment in assignments %}
             <tr>
                 <th scope="row">1</th>
-                <td>subject</td>
-                <td>title</td>
-                <td>description</td>
-                <td>due</td>
+                <td>{{assignment.subject}}</td>
+                <td>{{assignment.title}}</td>
+                <td>{{assignment.description}}</td>
+                <td>{{assignment.due}}</td>
 
                 <td>
                     <a href="#">
@@ -35,14 +36,15 @@
                 </td>
                 <td><a href="#"><i class="fa fa-trash fa-2x"></i></a></td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
-    <h4>All homeworks are completed!! Create to have more!!</h4>
+    <h4>All assignments are completed!! Create to have more!!</h4>
 </div>
 <div class=" container">
     <form method="POST">
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Create Homework</legend>
+            <legend class="border-bottom mb-4">Create assignment</legend>
         </fieldset>
         <div class="form-group">
             <button href="" class="btn btn-outline-info" type="submit">

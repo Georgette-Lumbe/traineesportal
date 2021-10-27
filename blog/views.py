@@ -47,6 +47,5 @@ def assignments(request):
     Create assignments view
     """
     assignments = Assignments.objects.filter(user=request.user)
-    context = {'assignemnts': assignments}
+    context = {'assignments': assignments}
     return render(request, 'assignments.html', context)
-
