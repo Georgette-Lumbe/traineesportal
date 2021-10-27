@@ -112,8 +112,6 @@ def delete_assignment(request, pk=None):  # Delete assignment
 
 def tasks(request):
     tasks = Tasks.objects.filter(user=request.user)  # Display title on table
-    context = {
-        'tasks': tasks
-    }
+    form = NotesForm()
+    context = {'tasks': tasks, 'form': form}
     return render(request, 'tasks.html', context)
-

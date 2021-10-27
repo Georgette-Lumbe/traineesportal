@@ -1,5 +1,5 @@
 from django import forms
-from . models import Notes, Assignments
+from . models import Notes, Assignments, Tasks
 
 # Forms
 
@@ -19,9 +19,18 @@ class DateInput(forms.DateInput):
 
 class AssignmentForm(forms.ModelForm):
     """
-    Map the Notesform
+    Map the Assignmentform
     """
     class Meta:
         model = Assignments
         widgets = {'due': DateInput()}
         fields = ['subject', 'title', 'description', 'due', 'is_finished']
+
+
+class TaskForm(forms.ModelForm):
+    """
+    Map the Taskform
+    """
+    class Meta:
+        model = Tasks
+        fields = ['title', 'is_finished']

@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="container">
@@ -21,7 +22,11 @@
                 <td>
                     <a href="#">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" checked id=1>
+                            {% if task.is_finished == True %}
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            {% else %}
+                            <input class="form-check-input" type="checkbox" value="">
+                            {% endif %}
                             <label class="form-check-label text-light" for="flexCheckDefault">
                                 Mark as Completed
                             </label>
@@ -38,8 +43,10 @@
 </div><br><br>
 <div class="container">
     <form method="POST">
+        {% csrf_token %} <!-- for not forbidden error -->
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Create Task</legend>
+            {{form|crispy}}
         </fieldset>
         <div class="form-group">
             <button href="" class="btn btn-outline-info" type="submit">
