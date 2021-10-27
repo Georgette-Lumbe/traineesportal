@@ -12,4 +12,6 @@ urlpatterns = [
     path('assignments', views.assignments, name='assignments'),
     path('update_assignment/<int:pk>', views.update_assignment,
          name='update-assignment'),
+    path('delete_assignment/<int:pk>', views.delete_assignment,
+         name='delete-assignment'),
 ]

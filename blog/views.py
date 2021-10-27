@@ -91,11 +91,20 @@ def assignments(request):
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(request, pk=None):  # When user hits checkbox
+def update_assignment(request, pk=None):
+    """
+        When user hits checkbox
+        to mark assignment as completed
+        """
     assignments = Assignments.objects.get(id=pk)
-    if assignments.is_finished is True:
+    if assignments.is_finished is True:   # When user hits checkbox
         assignments.is_finished = False
     else:
         assignments.is_finished = True
     assignments.save()
     return redirect('assignment')
+
+
+def delete_assignment(request, pk=None):  # Delete assignment
+    Assignments.objects.get(id=pk).delete()
+    return redirect('assignments')
