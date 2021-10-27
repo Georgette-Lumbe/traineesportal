@@ -47,5 +47,11 @@ def assignments(request):
     Create assignments view
     """
     assignments = Assignments.objects.filter(user=request.user)
-    context = {'assignments': assignments}
+    # When to notify the all assignments finished msg
+    if len(assignments) == 0:
+        assignment_done = True
+    else:
+        assignment_done = False
+
+    context = {'assignments': assignments, 'assignments_done': assignment_done}
     return render(request, 'assignments.html', context)
