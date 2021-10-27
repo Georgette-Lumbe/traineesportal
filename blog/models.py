@@ -39,6 +39,13 @@ class Assignments(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        """
+        Remove the extra s to assignments in the admin panel
+        """
+        verbose_name = 'assignments'
+        verbose_name_plural = 'assignments'
+
 
 class Tasks(models.Model):
     """
@@ -47,3 +54,10 @@ class Tasks(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     is_finished = models.BooleanField(default=False)
+
+    class Meta:
+        """
+        Remove the extra s to tasks in the admin panel
+        """
+        verbose_name = 'tasks'
+        verbose_name_plural = 'tasks'
