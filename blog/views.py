@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from . forms import Notes, NotesForm, AssignmentForm
 from django.contrib import messages
 from django.views import generic
-from . models import Assignments
+from . models import Assignments, Tasks
 
 # Views
 
@@ -111,5 +111,9 @@ def delete_assignment(request, pk=None):  # Delete assignment
 
 
 def tasks(request):
-    return render(request, 'tasks.html')
-    
+    tasks = Tasks.objects.filter(user=request.user)  # Display title on table
+    context = {
+        'tasks': tasks
+    }
+    return render(request, 'tasks.html', context)
+

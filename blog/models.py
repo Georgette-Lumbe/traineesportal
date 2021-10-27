@@ -54,6 +54,7 @@ class Tasks(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     is_finished = models.BooleanField(default=False)
+    objects = models.Manager()  # Object member
 
     def __str__(self):      # Display the tasks title
         return self.title

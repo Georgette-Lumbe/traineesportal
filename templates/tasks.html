@@ -14,9 +14,10 @@
             </tr>
         </thead>
         <tbody>
+            {% for task in tasks %}
             <tr>
-                <th scope="row">1</th>
-                <td>title</td>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{task.title}}</td>
                 <td>
                     <a href="#">
                         <div class="form-check">
@@ -30,6 +31,7 @@
 
                 <td><a href="#"><i class="fa fa-trash fa-2x"></i></a></td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
     <h4>All tasks have been done!! create to add more</h4>
@@ -37,7 +39,7 @@
 <div class="container">
     <form method="POST">
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Create Todo</legend>
+            <legend class="border-bottom mb-4">Create Task</legend>
         </fieldset>
         <div class="form-group">
             <button href="" class="btn btn-outline-info" type="submit">
