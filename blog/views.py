@@ -108,3 +108,8 @@ def update_assignment(request, pk=None):
 def delete_assignment(request, pk=None):  # Delete assignment
     Assignments.objects.get(id=pk).delete()
     return redirect('assignments')
+
+
+def tasks(request):
+    return render(request, 'tasks.html')
+    
