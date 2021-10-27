@@ -52,6 +52,7 @@
 </div>
 <div class=" container">
     <form method="POST">
+        {% csrf_token %}  <!-- for not forbidden error -->
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Create assignment</legend>
             {{form|crispy}}

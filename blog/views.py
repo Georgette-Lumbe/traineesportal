@@ -21,12 +21,14 @@ def notes(request):
     if request.method == "POST":  # When the save button is clicked
         form = NotesForm(request.Post)
         if form.is_valid():
-            notes = Notes(user=request.user, title=request.POST['title'], description=request.POST['description'])
+            notes = Notes(user=request.user, title=request.POST['title'],
+                          description=request.POST['description'])
             notes.save()
             # Message when the note is added
-            messages.success(request, f"Note added form {request.user.username} successfully!")
-        else:
-            form = NotesForm()
+            messages.success(request, f"Note from {request.user.username}"
+                             " successfully added!")
+    else:
+        form = NotesForm()
 
     notes = Notes.objects.filter(user=request.user)
     context = {'notes': notes, 'form': form}
@@ -46,7 +48,33 @@ def assignments(request):
     """
     Create assignments view
     """
-    form = AssignmentForm()
+    if request.method == 'POST':  # If the method is POST
+        form = AssignmentForm(request.POST)
+        if form.is_valid():
+            try:
+                finished = request.POST['is_finished']
+                if finished == 'on':
+                    finished = True
+                else:
+                    finished = False
+            except:
+                finished = False
+
+            assignments = Assignments(
+                user=request.user,
+                subject=request.POST['subject'],
+                title=request.POST['title'],
+                description=request.POST['description'],
+                due=request.POST['due'],
+                is_finished=finished
+            )
+            assignments.save()
+            # Message when the assignment is added
+            messages.success(request, f"Assignmnt from {request.user.username}"
+                             " successfully added!")
+    else:
+        form = AssignmentForm()  # If the method is not POST
+
     assignments = Assignments.objects.filter(user=request.user)
     # When to notify the all assignments finished msg
     if len(assignments) == 0:
