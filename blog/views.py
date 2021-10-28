@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from django.contrib import messages
-from django.views import generic, View
-from . models import Assignments, Tasks, PostOne
+from django.views import generic
+from . models import Assignments, Tasks
 
 # Views
 
