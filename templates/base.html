@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'homelist' %}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Profile</a>
@@ -42,9 +42,9 @@
                 Options
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Notes</a>
-                <a class="dropdown-item" href="#">Assignments</a>
-                <a class="dropdown-item" href="#">Task Lists</a>
+                <a class="dropdown-item" href="{% url 'notes' %}">Notes</a>
+                <a class="dropdown-item" href="{% url 'assignments' %}">Assignments</a>
+                <a class="dropdown-item" href="{% url 'tasks' %}">Task Lists</a>
                 <div class="dropdown-divider"></div>
 
                 <a class="dropdown-item" href="#">Blogpost 1</a>

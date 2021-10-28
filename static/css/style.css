@@ -29,10 +29,6 @@ footer {
 
 }
 
-/*.card-title {
-    text-decoration: none;
-    color: black;
-}*/
 
 .card-header:hover {
     background: rgb(11, 22, 83) !important;
@@ -72,10 +68,6 @@ a:hover {
 .icon-bar {
     color: black;
 }
-
-
-
-
 
 .card h4 {
     margin: 40px 40px 0 40px;
@@ -130,7 +122,10 @@ body {
     background-repeat: no-repeat;
 }
 
-
+.author {
+    color: rgb(126, 108, 108);
+    margin: 4px;
+}
 
 .card-header {
     background-color: rgb(133, 204, 231);
@@ -177,16 +172,9 @@ body {
     color: black;
 }
 
-
-footer .container-fluid {
-    padding: 10vmin 10vmin;
+.dark-bg {
+    background-color: black
 }
-
-footer .column a+a {
-    padding: 0 0.7em;
-}
-
-
 
 .content-section {
     background: #ffffff;
