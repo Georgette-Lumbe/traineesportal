@@ -34,4 +34,3 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Tasks
         fields = ['title', 'is_finished']
-

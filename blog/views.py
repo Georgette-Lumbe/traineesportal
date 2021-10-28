@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from django.contrib import messages
-from django.views import generic
-from . models import Assignments, Tasks
+from django.views import generic, View
+from . models import Assignments, Tasks, PostOne
 
 # Views
 
@@ -148,4 +148,3 @@ def tasks(request):
                 'task_done': task_done
     }
     return render(request, 'tasks.html', context)
-

@@ -29,6 +29,10 @@ footer {
 
 }
 
+/*.card-title {
+    text-decoration: none;
+    color: black;
+}*/
 
 .card-header:hover {
     background: rgb(11, 22, 83) !important;
