@@ -40,9 +40,23 @@ class NotesAdmin(admin.ModelAdmin):
     """
     list_display = ('title', 'description')
     search_fields = ('title', 'description')
-    summernote_fields = ('description')
+    list_filter = ('title', 'description')
 
 
-# admin.site.register(Notes)
-admin.site.register(Assignments)
-admin.site.register(Tasks)
+@admin.register(Tasks)
+class TasksAdmin(admin.ModelAdmin):
+    """
+    Manage Notes
+    """
+    list_display = ('title', 'is_finished')
+    list_filter = ('title', 'is_finished')
+
+
+@admin.register(Assignments)
+class AssignmentsAdmin(admin.ModelAdmin):
+    """
+    Manage Assignments
+    """
+    list_display = ('title', 'subject', 'description', 'due', 'is_finished')
+    list_filter = ('title', 'is_finished')
+    search_fields = ('title', 'subject')
