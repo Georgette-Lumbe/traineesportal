@@ -157,3 +157,24 @@ class PostOne(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'post_one.html'
+
+
+def profile(request):
+    assignments = Assignments.objects.filter(
+                    is_finished=False, user=request.user)
+    tasks = Tasks.objects.filter(is_finished=False, user=request.user)
+    if len(assignments) == 0:
+        assignment_done = True
+    else:
+        assignment_done = False
+    if len(tasks) == 0:
+        task_done = True
+    else:
+        task_done = False
+    context = {
+        'assignments': assignments,
+        'tasks': tasks,
+        'assignment_done': assignment_done,
+        'task_done': task_done
+    }
+    return render(request, 'profile.html', context)

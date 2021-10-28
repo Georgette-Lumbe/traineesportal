@@ -18,5 +18,6 @@ urlpatterns = [
 
     path('tasks', views.tasks, name='tasks'),     # tasks URL
 
-    # path('post_one', views.post_one, name='post_one'),
+    path('post_one', views.PostOne.as_view(), name='post_one'),
+    path('profile', views.profile, name='profile'),
 ]
