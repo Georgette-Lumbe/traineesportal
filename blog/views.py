@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from django.contrib import messages
 from django.views import generic
-from . models import Assignments, Tasks
+from . models import Assignments, Tasks, Post
 
 # Views
 
@@ -148,3 +148,12 @@ def tasks(request):
                 'task_done': task_done
     }
     return render(request, 'tasks.html', context)
+
+
+class PostOne(generic.ListView):
+    """
+    Create PostOne view
+    """
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'post_one.html'

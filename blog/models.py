@@ -24,6 +24,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='post_like', blank=True)
+    objects = models.Manager()
 
     def __str__(self):
         return self.title
