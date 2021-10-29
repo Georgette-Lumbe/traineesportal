@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from django.contrib import messages
 from django.views import generic
+from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from . models import Assignments, Tasks, Post
 
 # Views
@@ -12,7 +12,11 @@ def homelist(request):
     """
     Create homelist view
     """
-    return render(request, 'index.html')
+    posts = Post.objects.filter()  # Get the post id
+    context = {
+        'posts': posts,
+        }
+    return render(request, 'index.html', context)
 
 
 @login_required
