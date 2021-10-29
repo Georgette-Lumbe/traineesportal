@@ -97,12 +97,12 @@ def assignments(request):
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(request, pk=None):
+def update_assignment(request, post_id):
     """
         When user hits checkbox
         to mark assignment as completed
     """
-    assignment = Assignments.objects.get(id=pk)
+    assignment = Assignments.objects.get(pk=post_id)
     if assignment.is_finished is True:   # When user hits checkbox
         assignment.is_finished = False
     else:
@@ -154,35 +154,31 @@ def tasks(request):
     return render(request, 'tasks.html', context)
 
 
-# def post_one(request, post_id):
-#    """Create PostOne view"""
-#   post = Post.objects.get(pk=post_id)
-#   context = {
-#        'post': post,
-#   }
+def post_one(request, post_id):
+    """Create PostOne view"""
+    post = Post.objects.get(pk=post_id)
+    context = {
+        'post': post,
+        }
 
-#    return render(request, 'post_one.html', context)
+    return render(request, 'post_one.html', context)
 
 
+@login_required
 def profile(request):
     """
     A view to return the user's profile page
     """
-    assignment = Assignments.objects.filter(
-                    is_finished=False, user=request.user)
-    task = Tasks.objects.filter(is_finished=False, user=request.user)
-    if len(assignment) == 0:
-        assignment_done = True
-    else:
-        assignment_done = False
-    if len(task) == 0:
-        task_done = True
-    else:
-        task_done = False
-    context = {
-        'assignments': assignments,
-        'tasks': tasks,
-        'assignment_done': assignment_done,
-        'task_done': task_done
-    }
-    return render(request, 'profile.html', context)
+#    assignment = Assignments.objects.filter(
+#                    is_finished=False, user=request.user)
+#    task = Tasks.objects.filter(is_finished=False, user=request.user)
+#    if len(assignment) == 0:
+#        assignment_done = True
+#    else:
+#        assignment_done = False
+#    if len(task) == 0:
+#        task_done = True
+#    else:
+#       task_done = False
+
+    return render(request, 'profile.html')

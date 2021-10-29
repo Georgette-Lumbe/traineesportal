@@ -18,7 +18,7 @@ urlpatterns = [
 
     path('tasks', views.tasks, name='tasks'),     # Tasks URL
 
-    # path('post_one/<int:pk>', views.post_one, name='post_one'),
+    path('post_one/<int:post_id>', views.post_one, name='post_one'),
 
-    path('profile', views.profile, name='profile'),  # Profile URL
+    path('profile/', views.profile, name='profile'),  # Profile URL
 ]

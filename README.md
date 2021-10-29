@@ -23,14 +23,14 @@ The live website can be viewed [here](#)
         * [Skeleton](#Skeleton)
             * [Wireframes](#Wireframes)
             * [Database Schema](#Database-Schema)
-3. [Design](#Design)
-    *  [Colors](#Colors)
-    * [Typography](#Imagery)
-    * [Imagery](#Imagery)
+    * [Design](#Design)
+        *  [Colors](#Colors)
+        * [Typography](#Imagery)
+        * [Imagery](#Imagery)
 3. [Features Left To Implement](Feature-Left-To-Implement)
 4. [Technolgies Used](#Technologies-Used)        
 5. [Testing](#Testing)
-6. [Issues and bugs](#issues-and-bugs "Goto issues and bugs")
+6. [Issues and bugs](#issues-and-bugs)
 7. [Deployment](#Deployment)
     * [Deployment Steps](#Deployment-Steps) 
     * [Making a clone to run locally](#Making-a-clone-to-run-locally)
@@ -40,4 +40,9 @@ The live website can be viewed [here](#)
     * [Content](#Content)
     * [Code](#Code)
 9. [Acknowledgements](#Acknowledgements)
+
+---
+
+
+
 
