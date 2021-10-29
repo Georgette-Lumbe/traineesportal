@@ -89,13 +89,13 @@ def assignments(request):
     assignment = Assignments.objects.filter(user=request.user)
     # When to notify the all assignments finished msg
     if len(assignment) == 0:
-        assignments_done = True
+        assignment_done = True
     else:
-        assignments_done = False
+        assignment_done = False
 
     context = {
             'assignments': assignments,
-            'assignments_done': assignments_done,
+            'assignment_done': assignment_done,
             'form': form
     }
 
@@ -224,16 +224,22 @@ def profile(request):
     """
     A view to return the user's profile page
     """
-#    assignment = Assignments.objects.filter(
-#                    is_finished=False, user=request.user)
-#    task = Tasks.objects.filter(is_finished=False, user=request.user)
-#    if len(assignment) == 0:
-#        assignment_done = True
-#    else:
-#        assignment_done = False
-#    if len(task) == 0:
-#        task_done = True
-#    else:
-#       task_done = False
+    assignments = Assignments.objects.filter(
+                    is_finished=False, user=request.user)
+    tasks = Tasks.objects.filter(is_finished=False, user=request.user)
+    if len(assignments) == 0:
+        assignment_done = True
+    else:
+        assignment_done = False
+    if len(tasks) == 0:
+        task_done = True
+    else:
+        task_done = False
+    context = {
+        'assignments': assignments,
+        'tasks': tasks,
+        'assignment_done': assignment_done,
+        'task_done': task_done
+    }
 
-    return render(request, 'profile.html')
+    return render(request, 'profile.html', context)
