@@ -3,7 +3,7 @@
 {% block content %}
 
 <section class="container text-center">
-  <h3>Welcome</h3>
+  <h3>Welcome {{user.username}}</h3>
 
   <hr> <br>
 
@@ -16,6 +16,7 @@
             <h5 class="card-title">
               Notes
             </h5>
+            <hr>
             Create Notes to refer them later. They are stored permanently until deleted
           </div>
         </div>
@@ -30,6 +31,7 @@
             <h5 class="card-title ">
               Assignments
             </h5>
+            <hr>
             Add assignments and their deadlines. They will be displayed prioritised by deadlines
           </div>
         </div>
@@ -44,6 +46,7 @@
             <h5 class="card-title ">
              Task Lists
             </h5>
+            <hr>
             Add your task lists for your day and remove them as you finish
           </div>
         </div>
@@ -56,31 +59,34 @@
     {% for post in posts %}
     <div class="col-md-4 ">
       
-      <a href="{% url 'post_one' post.id %}">
         <div class="card mt-20">
           <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635278000/mindset_wgmjud.jpg" alt="Notes image">
           <div class="card-body">
             <h5 class="card-title ">
-              Blog post 1
+              Mindset
             </h5>
-            Some content here
+            <hr>
+            The way you think can change the way you learn. Because of this,
+            having a growth mindset might be one of the most important parts of education and training.
+            <br>
+            <strong><a href="{% url 'post_one' post.id %}">Read More</a></strong>
           </div>
         </div>
       </a>
     </div>
-    {% endfor %}
-
-
-
+    
     <div class="col-md-4">
       <a href="#">
         <div class="card">
           <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635278013/learn_ut8mhf.jpg" alt="Notes image">
           <div class="card-body">
             <h5 class="card-title ">
-              Blog Post 2
+              Relationship
             </h5>
-            Some Content here
+            <hr>
+            Building good working relationships is crucial to succeeding. Better working relationships will help you to be
+            more engaged, and more productive. They are the foundation on which we succeed.
+            <strong><a href="{% url 'post_one' post.id %}">Read More</a></strong>
           </div>
         </div>
       </a>
@@ -91,14 +97,17 @@
           <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635278017/advice_abq4yn.jpg" alt="Notes image">
           <div class="card-body">
             <h5 class="card-title ">
-              Blog post 3
+              Advice
             </h5>
-            Some content here
+            <hr>
+            Every workplace is different. Discover what you can expect in your workplace and also what’s expected of you.
+            You can also learn what to do about bullying and harassment.
+            <strong><a href="{% url 'post_one' post.id %}">Read More</a></strong>
           </div>
         </div>
       </a>
     </div>
-
+    {% endfor %}
 
 </section>
 {% endblock content %}

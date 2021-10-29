@@ -24,7 +24,8 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Trainees Portal</a>       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <a class="navbar-brand" href="#">Trainees Portal</a>       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,9 +48,9 @@
                 <a class="dropdown-item" href="{% url 'tasks' %}">Task Lists</a>
                 <div class="dropdown-divider"></div>
 
-                <a class="dropdown-item" href="#">Blogpost 1</a>
-                <a class="dropdown-item" href="#">Blogpost 2</a>
-                <a class="dropdown-item" href="#">Blogpost 3</a>
+                <a class="dropdown-item" href="#">Mindset</a>
+                <a class="dropdown-item" href="#">Relationship</a>
+                <a class="dropdown-item" href="#">Advice</a>
               </div>
             </li>
             {% if user.is_authenticated %}
@@ -75,7 +76,7 @@
     <!-- Display alert messages -->
     {% if messages %}
       {% for msg in messages %}
-        <div class="alert alert.{{msg.tags}}">{{msg}}</div>
+        <div class="alert alert-success.{{msg.tags}}">{{msg}}</div>
       {% endfor %}
     {% endif %}
 
