@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.views import generic
-from . forms import Notes, NotesForm, AssignmentForm, TaskForm
+from . forms import Notes, NotesForm, AssignmentForm, TaskForm, CommentForm
 from . models import Assignments, Tasks, Post
 
 # Views
@@ -159,10 +159,16 @@ def tasks(request):
 
 
 def post_one(request, post_id):
-    """Create PostOne view"""
     post = Post.objects.get(pk=post_id)
+    comments = post.comments.filter(approved=True).order_by("-created_on")
+    liked = False
+    if post.likes.filter().exists():
+        liked = True
     context = {
-        'post': post,
+        "post": post,
+        "comments": comments,
+        "liked": liked,
+        "comment_form": CommentForm()
         }
 
     return render(request, 'post_one.html', context)

@@ -1,5 +1,5 @@
 from django import forms
-from . models import Notes, Assignments, Tasks
+from . models import Notes, Assignments, Tasks, Comment
 
 # Forms
 
@@ -34,3 +34,9 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Tasks
         fields = ['title', 'is_finished']
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)
