@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.views import generic
+from django.views import generic, View
+from django.http import HttpResponseRedirect
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm, CommentForm
 from . models import Assignments, Tasks, Post
 
@@ -205,6 +206,17 @@ def post(self, request, slug, *args, **kwargs):
                 "liked": liked
             }
         )
+
+
+class PostLike(View):
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_one', args=[slug]))
 
 
 @login_required

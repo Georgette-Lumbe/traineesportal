@@ -19,6 +19,7 @@ urlpatterns = [
     path('tasks', views.tasks, name='tasks'),     # Tasks URL
 
     path('post_one/<int:post_id>', views.post_one, name='post_one'),
+    path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
 
     path('profile/', views.profile, name='profile'),  # Profile URL
 ]
