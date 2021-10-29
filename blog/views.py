@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm
 from django.contrib import messages
 from django.views import generic
@@ -14,6 +15,7 @@ def homelist(request):
     return render(request, 'index.html')
 
 
+@login_required
 def notes(request):
     """
     Create notes view
@@ -47,6 +49,7 @@ class NotesDetailView(generic.DetailView):
     model = Notes
 
 
+@login_required
 def assignments(request):
     """
     Create assignments view
@@ -113,6 +116,7 @@ def delete_assignment(request, pk=None):  # Delete assignment
     return redirect('assignments')
 
 
+@login_required
 def tasks(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
