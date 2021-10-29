@@ -23,19 +23,19 @@ def notes(request):
     if request.method == 'POST':  # When the save button is clicked
         form = NotesForm(request.Post)
         if form.is_valid():  # If the value is valid
-            notes = Notes(
+            note = Notes(
                 user=request.user,
                 title=request.POST['title'],
                 description=request.POST['description']
             )
-            notes.save()
+            note.save()
             # Message when the note is added
             messages.success(request, f"Note from {request.user.username}"
                              " successfully added!")
     else:
         form = NotesForm()
 
-    notes = Notes.objects.filter(user=request.user)
+    note = Notes.objects.filter(user=request.user)
     context = {'notes': notes, 'form': form}
     return render(request, 'notes.html', context)
 
@@ -66,7 +66,7 @@ def assignments(request):
             except:
                 finished = False
 
-            assignments = Assignments(
+            assignment = Assignments(
                 user=request.user,
                 subject=request.POST['subject'],
                 title=request.POST['title'],
@@ -74,23 +74,23 @@ def assignments(request):
                 due=request.POST['due'],
                 is_finished=finished
             )
-            assignments.save()
+            assignment.save()
             # Message when the assignment is added
             messages.success(request, f"Assignmnt from {request.user.username}"
                              " successfully added!")
     else:
         form = AssignmentForm()  # If the method is not POST
 
-    assignments = Assignments.objects.filter(user=request.user)
+    assignment = Assignments.objects.filter(user=request.user)
     # When to notify the all assignments finished msg
-    if len(assignments) == 0:
-        assignment_done = True
+    if len(assignment) == 0:
+        assignments_done = True
     else:
-        assignment_done = False
+        assignments_done = False
 
     context = {
             'assignments': assignments,
-            'assignments_done': assignment_done,
+            'assignments_done': assignments_done,
             'form': form
     }
 
@@ -102,12 +102,12 @@ def update_assignment(request, pk=None):
         When user hits checkbox
         to mark assignment as completed
     """
-    assignments = Assignments.objects.get(id=pk)
-    if assignments.is_finished is True:   # When user hits checkbox
-        assignments.is_finished = False
+    assignment = Assignments.objects.get(id=pk)
+    if assignment.is_finished is True:   # When user hits checkbox
+        assignment.is_finished = False
     else:
-        assignments.is_finished = True
-    assignments.save()
+        assignment.is_finished = True
+    assignment.save()
     return redirect('assignment')
 
 
@@ -129,20 +129,20 @@ def tasks(request):
                     finished = False
             except:
                 finished = False
-            tasks = Tasks(
+            task = Tasks(
                 user=request.user,
                 title=request.POST['title'],
                 is_finished=finished
             )
-            tasks.save()  # Save to database
+            task.save()  # Save to database
             # Message when the assignment is added
             messages.success(request, f"Task from {request.user.username}"
                              " successfully added!")
     else:
         form = TaskForm()
 
-    tasks = Tasks.objects.filter(user=request.user)  # Display title on table
-    if len(tasks) == 0:
+    task = Tasks.objects.filter(user=request.user)  # Display title on table
+    if len(task) == 0:
         task_done = True
     else:
         task_done = False
@@ -154,24 +154,28 @@ def tasks(request):
     return render(request, 'tasks.html', context)
 
 
-class PostOne(generic.ListView):
-    """
-    Create PostOne view
-    """
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'post_one.html'
+# def post_one(request, post_id):
+#    """Create PostOne view"""
+#   post = Post.objects.get(pk=post_id)
+#   context = {
+#        'post': post,
+#   }
+
+#    return render(request, 'post_one.html', context)
 
 
 def profile(request):
-    assignments = Assignments.objects.filter(
+    """
+    A view to return the user's profile page
+    """
+    assignment = Assignments.objects.filter(
                     is_finished=False, user=request.user)
-    tasks = Tasks.objects.filter(is_finished=False, user=request.user)
-    if len(assignments) == 0:
+    task = Tasks.objects.filter(is_finished=False, user=request.user)
+    if len(assignment) == 0:
         assignment_done = True
     else:
         assignment_done = False
-    if len(tasks) == 0:
+    if len(task) == 0:
         task_done = True
     else:
         task_done = False

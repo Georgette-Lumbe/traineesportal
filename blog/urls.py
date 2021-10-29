@@ -16,8 +16,9 @@ urlpatterns = [
     path('update_assignment/<int:pk>', views.update_assignment,
          name='update_assignment'),
 
-    path('tasks', views.tasks, name='tasks'),     # tasks URL
+    path('tasks', views.tasks, name='tasks'),     # Tasks URL
 
-    path('post_one', views.PostOne.as_view(), name='post_one'),
-    path('profile', views.profile, name='profile'),
+    # path('post_one/<int:pk>', views.post_one, name='post_one'),
+
+    path('profile', views.profile, name='profile'),  # Profile URL
 ]
