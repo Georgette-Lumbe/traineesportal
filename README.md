@@ -43,6 +43,125 @@ The live website can be viewed [here](#)
 
 ---
 
+# INTRODUCTION
 
+
+# UX
+
+# Features Left To Implement
+
+# Technolgies Used
+
+# Testing
+
+# Issues and bugs
+
+# Deployment
+
+This project was developed using [Gitpod IDE](https://gitpod.io) and pushed to Github using the in-built terminal. However, because Github can only host static websites it was necessary to deploy this project to Heroku because it is a compatible hosting platform for a back-end focused site like Trainees Portal.
+
+This project was deployed using Heroku and stored in GitHub.
+
+## Repository Creation
+
+1. Navigate to [Github](https://github.com/).
+2. Create a new repository by first clicking the green button labeled new on the top left of the screen.
+3. Select the [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) in the templates section.
+4. Give the repository a name, in this case Trainees Portal.
+5. Click the green 'Create Repository' button at the bottom of the page.
+6. Inside the repository click the green 'gitpod' button to initialize your repository.
+8. Future access to this workspace must be gained through gitpod workspaces, clicking the green button in gitpod again 
+will initialize a new workspace.
+9. Use the `git add .` command to add all modified and new files to the staging area.
+10. Use the `git commit -m` command to commit a change to the local repository.
+11. Use the `git push` command to push all committed changes to github.   
+
+Before deploying the website to Heroku, the following five must be followed to allow the app to work in Heroku:
+
+1.  Install `django-gunicorn`, `psycopg2` and `dj_database_url`, `cloudinary` in your workspace cli.
+
+2. Create requirements.txt file that contains the names of packages being used in Python. It is important to update this file if other packages or modules are installed during project development by using the following command:
+
+    - pip freeze --local > requirements.txt
+
+3. Create Procfile that contains the name of the application file so that Heroku knows what to run. If the Procfile has a blank line when it is created remove this as this may cause problems.
+
+4. Create env.py that conrtains all secret variables as DATABASE_URL, SECRET_KEY and CLOUDINARY_URL, this file is hidden.
+
+5. Push these files to GitHub.
+
+## Deployment Steps
+
+Once the above steps are done, the website can be deployed in Heroku using the steps listed below:
+
+1. Log into Heroku .
+2. Click the New button.
+3. Click the option to create a new app.
+4. Enter the app name in lowercase letters.
+5. Select the correct geographical region.
+6. Click to create
+
+## Add Heroku Postgres Database
+1. Click the resources tab in heroku.
+2. Under Add-ons search for heroku postgres.
+3. Click on heroku postgres when it appears. 
+4. Select the Hobby Dev-Free option in plans. 
+5. Click submit order form.
+
+## Setting up environment variables
+1. In the heroku settings click the reveal config vars button and set the following variables:
+    - DATABASE_URL
+    - SECRET_KEY
+    - CLOUDINARY_URL
+    - DISABLE_COLLECTSTATIC (This variable was removed, see more in [Issues and bugs](#issues-and-bugs))
+   
+    The values of these variables are secret and for security purposes will not be shared here. 
+
+## Connect Heroku app to Github repository
+
+1. In heroku select the deploy tab.
+2. Click github button.
+3. Enter the repository name and click search.
+4. Select the relevant repository and click connect
+5. Select Main branch
+6. Click on deploy branch 
+
+## Enable automatic deployment:
+
+1. Click the Deploy tab
+2. In the Automatic deploys section, the main branch is enabled to deploy then click Enable Automation Deploys.
+
+## Making a clone to run locally
+
+It is important to note that this project will not run locally unless an env.py file has been set up by the user which contains the DATABASE_URL, SECRET_KEY and CLOUDINARY_URL which have all been kept secret in keeping with best security practices. 
+
+1. Log into GitHub.
+2. Select the [respository](https://github.com/Georgette-Lumbe/traineesportal).
+3. Click the Code dropdown button next to the green Gitpod button.
+4. Download ZIP file and unpackage locally and open with IDE. Alternatively copy the URL in the HTTPS box.
+5. Open the alternative editor and terminal window.
+6. Type 'git clone' and paste the copied URL.
+7. Press Enter. A local clone will be created.
+
+Once the project been loaded into the IDE it is necessary to install the necessary requirements which can be done by typing the following command.
+
+    -pip install -r requirements.txt
+
+## How to Fork the respository.
+
+1. Log into GitHub.
+2. In Github go to the [respository](https://github.com/Georgette-Lumbe/traineesportal).
+3. In the top right hand corner click "Fork".
+
+---
+
+
+
+
+
+
+# Credits
+
+# Acknowledgements
 
 
