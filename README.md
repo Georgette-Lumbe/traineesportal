@@ -48,11 +48,46 @@ The live website can be viewed [here](#)
 
 # UX
 
+### Skeleton
+
+#### Wireframes
+
+Wireframes were created using [Balsamiq wireframes](https://balsamiq.com/)
+
+The wireframe mockup links can be found below:
+
+* [Home Page]()
+
+* [Profile Page]()
+
+* [Login Page]()
+
+* [Logout Page]()
+
+* [Notes Page]()
+
+* [Assignments Page]()
+
+* [Tasks list Page]()
+
+* [Post 1 Page]()
+
+* [Post 2 Page]()
+
+* [Post 3 Page]()
+
+#### Database Schema
+
+<img src="" width="">
+
+
 # Features Left To Implement
 
 # Technolgies Used
 
 # Testing
+
+Testing information can be found in a separate [testing file]().
 
 # Issues and bugs
 
