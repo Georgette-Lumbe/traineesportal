@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.views import generic, View
-from django.http import HttpResponseRedirect
+from django.views import generic
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm, CommentForm
 from . models import Assignments, Tasks, Post
 
@@ -161,11 +160,10 @@ def tasks(request):
 
 def post_one(request, post_id):
     post = Post.objects.get(pk=post_id)
-    comments = post.comments.filter(approved=True).order_by("-created_on")
+    comments = post.comments.filter().order_by("-created_on")
     context = {
         "post": post,
         "comments": comments,
-        "commented": False,
         "comment_form": CommentForm()
         }
 
