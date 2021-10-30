@@ -22,8 +22,6 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='post_like', blank=True)
     objects = models.Manager()
 
     def __str__(self):
@@ -35,12 +33,6 @@ class Post(models.Model):
         using descending order
         """
         ordering = ["-created_on"]
-
-    def number_of_likes(self):
-        """
-        Return total likes of a post
-        """
-        return self.likes.count()
 
 
 class Comment(models.Model):
