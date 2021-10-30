@@ -44,13 +44,10 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'notes' %}">Notes</a>
-                <a class="dropdown-item" href="{% url 'assignments' %}">Assignments</a>
-                <a class="dropdown-item" href="{% url 'tasks' %}">Task Lists</a>
                 <div class="dropdown-divider"></div>
-
-                <a class="dropdown-item" href="#">Mindset</a>
-                <a class="dropdown-item" href="#">Relationship</a>
-                <a class="dropdown-item" href="#">Advice</a>
+                <a class="dropdown-item" href="{% url 'assignments' %}">Assignments</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'tasks' %}">Task Lists</a>
               </div>
             </li>
             {% if user.is_authenticated %}

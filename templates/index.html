@@ -9,42 +9,38 @@
 
   <div class="row">
     <div class="col-md-4">
-      <a href="{% url 'notes' %}">
         <div class="card">
           <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277268/notes_chxhbj.jpg" alt="Notes image">
           <div class="card-body">
             <h5 class="card-title">
-              >Notes
+              <a href="{% url 'notes' %}"><strong>Notes</strong></a>
             </h5>
             <hr>
             Create Notes to refer them later. They are stored permanently until deleted
           </div>
         </div>
-      </a>
     </div>
 
     <div class="col-md-4">
-      <a href="{% url 'assignments' %}">
+      
         <div class="card">
           <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277243/assignment_quevwz.jpg" alt="Assignment image">
           <div class="card-body">
             <h5 class="card-title ">
-              Assignments
+              <a href="{% url 'assignments' %}"><strong>Assignments</strong></a>
             </h5>
             <hr>
             Add assignments and their deadlines. They will be displayed prioritised by deadlines
           </div>
         </div>
-      </a>
     </div>
     
     <div class="col-md-4">
-      <a href="{% url 'tasks' %}">
         <div class="card">
           <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277251/to-do_wvyove.jpg" alt="To-do image">
           <div class="card-body">
             <h5 class="card-title ">
-             Task Lists
+              <a href="{% url 'tasks' %}"><strong>Task Lists</strong></a>
             </h5>
             <hr>
             Add your task lists for your day and remove them as you finish
@@ -60,52 +56,17 @@
     <div class="col-md-4 ">
       
         <div class="card mt-20">
-          <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635278000/mindset_wgmjud.jpg" alt="Notes image">
+          <img class="card-img-top" src="{{ post.featured_image.url }}" alt="Post image">
           <div class="card-body">
             <h5 class="card-title ">
-              Mindset
+              <strong>{{post.title}}</strong>
             </h5>
             <hr>
-            The way you think can change the way you learn. Because of this,
-            having a growth mindset might be one of the most important parts of education and training.
+            {{post.excerpt}}
             <br>
-            <strong><a href="{% url 'post_one' post.id %}">Read More</a></strong>
+            <a href="{% url 'post_one' post.id %}"><strong>Read More</strong></a>
           </div>
         </div>
-      </a>
-    </div>
-    
-    <div class="col-md-4">
-      <a href="#">
-        <div class="card">
-          <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635278013/learn_ut8mhf.jpg" alt="Notes image">
-          <div class="card-body">
-            <h5 class="card-title ">
-              Relationship
-            </h5>
-            <hr>
-            Building good working relationships is crucial to succeeding. Better working relationships will help you to be
-            more engaged, and more productive. They are the foundation on which we succeed.
-            <strong><a href="#">Read More</a></strong>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a href="#">
-        <div class="card">
-          <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635278017/advice_abq4yn.jpg" alt="Notes image">
-          <div class="card-body">
-            <h5 class="card-title ">
-              Advice
-            </h5>
-            <hr>
-            Every workplace is different. Discover what you can expect in your workplace and also what’s expected of you.
-            You can also learn what to do about bullying and harassment.
-            <strong><a href="#">Read More</a></strong>
-          </div>
-        </div>
-      </a>
     </div>
     {% endfor %}
 
