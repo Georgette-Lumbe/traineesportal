@@ -10,7 +10,9 @@ The live website can be viewed [here](#)
     * [User Stories](#User-Stories)
     * [Development Planes](#development-planes)
         * [Strategy](#Strategy)
-            * [Project Goals](#Project-Goals)
+         * [Skeleton](#Skeleton)
+            * [Wireframes](#Wireframes)
+            * [Database Schema](#Database-Schema)
         * [Structure](#Structure)
             * [Existing Features](#Existing-Features) 
                 * [Features on all pages](#Features-on-all-pages)
@@ -20,9 +22,6 @@ The live website can be viewed [here](#)
                 * [Profile Page Features](#Profile-Page-Features)
                 * [Log Out Features](#Log-Out-Features)
                 * [Features exclusive to Admin](#Features-exclusive-to-Admin)
-        * [Skeleton](#Skeleton)
-            * [Wireframes](#Wireframes)
-            * [Database Schema](#Database-Schema)
     * [Design](#Design)
         *  [Colors](#Colors)
         * [Typography](#Imagery)
@@ -58,6 +57,16 @@ This is the fourth of five milestone projects that the developer is required to 
 
 # UX
 
+## Development Planes
+
+### Strategy
+
+**The Ideal User of this site:**
+
+* is someone who wants to start a work placement
+* is someone who wants to start a traineeship
+* is someone who has just started a traineeship or work placement
+
 ### Skeleton
 
 #### Wireframes
@@ -90,6 +99,9 @@ The wireframe mockup links can be found below:
 
 <img src="" width="">
 
+### Structure
+
+#### Existing Features
 
 # Features Left To Implement
 
@@ -100,6 +112,66 @@ The wireframe mockup links can be found below:
 Testing information can be found in a separate [testing file]().
 
 # Issues and bugs
+
+The developper met some issues during the development of the website, below are the issues, bugs and solutions that the developer has encountered:
+
+1. Git push Issue
+
+    * The developer met an error while trying to push commit changes to github.
+    <img src="" width="">
+
+    * To achieve this, the developer consulted the Code Institute Tutor Support. The problem was that the developer pushed a commit changes directly to github and gitpod breaks.
+
+    * The developer did these steps to fix the problem:
+
+    `git add`
+    `git remote -v`
+    `git log`
+    `git status`
+    `git log`
+    `git add` `git commit -m " any message`
+    and `git push origin main --force`
+
+2. Django admin
+
+    * The django admin was working perfectlt but without any style
+    <img src="" width="">
+
+    * The developer consulted the Code Institute Tutor Support, to achieve this. The problem was that DEBUG was equal to True in settings.py file. To resolve it, the developer put DEBUG = FALSE and remove DISABLE_COLLECTSTATIC to Heroku settings.
+
+3. Server Error 500:
+
+    * The developer met a lot of times the Server Error 500, the problem was in the views.py code
+
+4. Page not found
+
+    * Profile : the page profile was not working. After many attempts, the developer noticed that the problem was in the urls.py, it was missing a `slash` after profile.
+
+    * Post_details : the post_details was not showing up after the developer create views, connect to the template and get urls. In order to understand and resolve this problem, the developer consulted the Code Institute Tutor Support. The main problem was that the blogs that was showing on the index page awas placeholders, they was not coming from database.  They should normally need to come from database in order to show them and link to the correct id for the url.
+
+    The developer did these following steps to get that sorted:
+    * Get all the blog posts from the database
+    * Create a context dictionnaries
+    * Inside the context dict, create a key:value pair: key is posts, value is the posts got from database
+    * Add context into the render: render(request, template, context)
+    Then in the post_details TEMPLATE:
+    * loop through the list: for post in posts
+    * get all fields for each post with post.fieldname
+    * update the url to use post.id
+
+5. Update Information
+
+    * 
+
+6. Unfixed Issue
+
+    * Likes: The developer had issues to permit user to like and unlike. So, the developer decide to remove this option and just leave the comment option.
+
+7. Request 
+
+    * There was a error message about request: Unused argument 'request'.
+    * The developer visited this [post](https://github.com/PyCQA/pylint-django/issues/155)
+    * To this problem, the developer write an `underscore` before request.
 
 # Deployment
 
@@ -204,6 +276,7 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 
 
 
+# Languages used
 
 # Credits
 

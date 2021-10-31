@@ -197,7 +197,8 @@ def post_details(request, post_id):
     Create Post details view
     """
     post = Post.objects.get(pk=post_id)
-    comment = post.comments.filter().order_by("-created_on")
+    comments = post.comments.order_by("-created_on")
+    form = None
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -208,9 +209,11 @@ def post_details(request, post_id):
             comment.save()
     else:
         form = CommentForm()
+
+    print(type(comments))
     context = {
         "post": post,
-        "comments": comment,
+        "comments": comments,
         "comment": True,
         "form": form,
         }
