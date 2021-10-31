@@ -15,25 +15,20 @@ The live website can be viewed [here](#)
             * [Database Schema](#Database-Schema)
         * [Structure](#Structure)
             * [Existing Features](#Existing-Features) 
-                * [Features on all pages](#Features-on-all-pages)
-                * [Home Page Features](#Home-Page-Features)
-                * [Login Page Features](#Login-Page-Features)
-                * [Register Page Features](#Sign-Up-Page-Features)
-                * [Profile Page Features](#Profile-Page-Features)
-                * [Log Out Features](#Log-Out-Features)
-                * [Features exclusive to Admin](#Features-exclusive-to-Admin)
+            * [Features Left To Implement](Feature-Left-To-Implement)
     * [Design](#Design)
         *  [Colors](#Colors)
         * [Typography](#Imagery)
         * [Imagery](#Imagery)
-3. [Features Left To Implement](Feature-Left-To-Implement)
-4. [Technolgies Used](#Technologies-Used)        
-5. [Testing](#Testing)
-6. [Issues and bugs](#issues-and-bugs)
-7. [Deployment](#Deployment)
+
+3. [Technolgies Used](#Technologies-Used)        
+4. [Testing](#Testing)
+5. [Issues and bugs](#issues-and-bugs)
+6. [Deployment](#Deployment)
     * [Deployment Steps](#Deployment-Steps) 
     * [Making a clone to run locally](#Making-a-clone-to-run-locally)
     * [How to Fork the respository](#How-to-Fork-the-Respository)
+7. [Languages Used](#languages-used)
 8. [Credits](#Credits)
     * [Media](#Media)
     * [Content](#Content)
@@ -130,7 +125,99 @@ The wireframe mockup links can be found below:
 
 #### Existing Features
 
-# Features Left To Implement
+ 1. Features on all pages**
+
+    * Navbar
+        - The navbar contains a conventionally placed logo at the top left of the page, if the user is not register, there are three buttons: Home, Register and login
+
+        <img src="" width="450" height="300" alt="navbar-register-page">
+
+        - If the user login, there are four buttons: Home, Profile, Options which contains three personal options of the site and Logout.
+
+        <img src="" width="450" height="300" alt="navbar-login-page">
+
+    * Footer
+        - The footer contains the copyright
+
+        <img src="" width="450" height="300" alt="footer-page">
+
+2. Home Page Features
+
+    * There are six boxes representing the different options of the site: Notes, assignments, task lists and as a blog: Mindset, Relationship and Advice. They are all represented with a picture and a description.
+
+    <img src="" width="450" height="300" alt="home_page">
+
+
+3. Register Page Features
+
+    * The Register button directs the user to the sign in page which asks the user to fill their username, email(optional), set the password and confirm it.
+
+    <img src="" width="450" height="300" alt="register-page">
+
+4. Log In Page Features
+
+    * The login button directs the user to the login page which asks the user to fill their username and password.
+
+    <img src="" width="450" height="300" alt="login-page">
+
+5. Profile Page Features
+
+    * A profile page is automatically created for the user once they have registered with the site. The profile form is automatically updated with the due information that the user put in the tasks and assignments. The user can update this information. Beneath the profile form there is a table with the user's personal information. There are tasks and assignments buttons that lead the user directly to the options wanted.
+
+    <img src="" width="450" height="300" alt="profile-page">
+
+6. Log Out Features
+
+    * The log out button directs the user to the signout page which asks the user to confirm that they wish to sign out.
+
+    <img src="" width="450" height="300" alt="Logout-page">
+
+7. Notes features
+
+    * There is a form that the user should fill to create note and once the note created, it will appear above the form.
+
+    <img src="" width="450" height="300" alt="note-page">
+
+8. Assignments features
+
+    * There is a form that the user should fill to create assignment and once the assignment created, it will appear in the table above the form.
+
+    <img src="" width="450" height="300" alt="assignement-page">
+
+9. Task lists features
+
+    * There is a form that the user should fill to create task and once the task created, it will appear in the table above the form.
+
+    <img src="" width="450" height="300" alt="task-page">
+
+9. Blog posts features
+
+    * There are three blog posts, they contain picture, content and comment arrea.
+
+    <img src="" width="450" height="300" alt="blog-posts-page">
+
+10. Message features
+
+    * Everytime that the user makes a successfully operation, there is successfully message appears at the top.
+
+    <img src="" width="450" height="300" alt="success-message-page">
+
+11. Features exclusive to Admin
+
+* Only the Admin can edit/delete all content on the site. 
+
+
+## Features Left To Implement
+
+The scope of this project was quite large at its inception and decisions had to be made to sacrifice certain content and features in order to meet the submission deadline. The following features will be explored and implemented at a later date:
+
+* ABOUT page was a potential feature in which users would be able to find out more information about Trainess Portal and also about the staff and the purpose of the site. All this data would be contained in its own model which would be modified when necessary by the site administrator through the site management tab and in the admin view.
+
+* Like, will be a attractive feature, so that user can see how many person likes the page and make blog posts more attractive.
+
+[Go to top](#introduction)
+
+---
 
 # Technolgies Used
 
@@ -161,8 +248,8 @@ The developper met some issues during the development of the website, below are 
 
 2. Django admin
 
-    * The django admin was working perfectlt but without any style
-    <img src="" width="">
+    * The django admin was working perfectly but without any style
+    <img src="" width="" alt="django-admin-issue>
 
     * The developer consulted the Code Institute Tutor Support, to achieve this. The problem was that DEBUG was equal to True in settings.py file. To resolve it, the developer put DEBUG = FALSE and remove DISABLE_COLLECTSTATIC to Heroku settings.
 
@@ -200,7 +287,7 @@ The developper met some issues during the development of the website, below are 
     * The developer visited this [post](https://github.com/PyCQA/pylint-django/issues/155)
     * To this problem, the developer write an `underscore` before request.
 
-[Go to top](Introduction)
+[Go to top](#introduction)
 ---
 
 # Deployment
