@@ -1,10 +1,10 @@
 # Trainee Portal - Testing
 
-[Main README.md file]()
+[Main README.md file](https://github.com/Georgette-Lumbe/traineesportal/blob/main/README.md)
 
-[View live project]()
+[View live project](https://traineesportal.herokuapp.com/)
 
-[View website in GitHub pages]()
+[View website in GitHub pages](https://github.com/Georgette-Lumbe/traineesportal)
 
 ---
 

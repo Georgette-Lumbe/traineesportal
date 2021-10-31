@@ -2,7 +2,7 @@
 
 <img src="" width="">
 
-The live website can be viewed [here](#)
+The live website can be viewed [here](https://traineesportal.herokuapp.com/)
 
 # Table of contents
 1. [Introduction](#introduction)
@@ -289,7 +289,7 @@ The scope of this project was quite large at its inception and decisions had to 
 
 # Testing
 
-Testing information can be found in a separate [testing file]().
+Testing information can be found in a separate [testing file](https://github.com/Georgette-Lumbe/traineesportal/blob/main/TESTING.md).
 
 # Issues and bugs
 
