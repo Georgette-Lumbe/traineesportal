@@ -251,14 +251,14 @@ The scope of this project was quite large at its inception and decisions had to 
     - Heroku was used as a cloud-based platform to deploy this site.
 7. [Google fonts](https://fonts.google.com/) 
     - The font styles used on this website were chosen from Google fonts.
-8. [Bootstrap]()
+8. [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Various aspects of this website were structured using Materialize.
     - Bootstrap was used to make this website responsive
 9. [Fontawesome](https://fontawesome.com/)
     - The icons used on this page were found in Fontawesome.
 10. [Heroku Postgres](https://www.heroku.com/postgres)
     - Heroku was used as the database for this project in production mode after deployment to Heroku.
-11. [Cloudinary]())
+11. [Cloudinary](https://cloudinary.com/)
     - Cloudinary was used to store all medias of this site.    
 12. [Balsamiq](https://balsamiq.com/)
     - The wireframes for this project were created using Balsamiq.
@@ -465,6 +465,31 @@ This project is primarily built using:
 
 # Credits
 
+## Media
+
+* All images used in this site was originally obtained from [unsplash](https://unsplash.com/)
+
+## Content
+
+* The Mindset blogpost content was originally obtained from [GVI](https://www.gvi.co.uk/blog/why-having-a-growth-mindset-is-important-for-learning/)
+* The Relationship blogpost content was originally obtained from [Michael Page](https://www.michaelpage.co.uk/advice/career-advice/growing-your-career/build-good-relationships)
+* The Advice blogpost content was originally obtained from [NSW](https://education.nsw.gov.au/skills-nsw/apprentices-and-trainees/apprentice-trainee-learning-advice-and-support-atlas#Balancing_7)
+
+## Code
+
+* A large portion of this project's code was inspired by Matt Rudge's. This Code Institute tutorial was instrumental in the creation of this site.
+* [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) : Bootstrap library was used throughout the project mainly to make site responsive.
+
 # Acknowledgements
 
+* I would like to thank my mentor, Adegbenga Adeye, for his guidance and helpful feedback.
 
+* I would like to thank the entire slack community for being a source of support, knowledge and positive feedback throughout this project.
+
+* I would like to thank the tutor support for their patience and guidance throughout the development of this project. In particular, I would like to thank jo_ci, sean_ci, Igor_ci, Ed_ci, and Kasia. I really am immensely grateful and cannot thank each of them enough. 
+
+* I would like to thank my own class cohorts for being supportive and helpful throughout the duration of the course. This particular channel provided a great deal of respite and also necessary feedback throughout the course which has proven invaluable for maintaining motivation. 
+
+* Finally I would like to thank my fiance Jimmy for constantly helping to test the project throughout its development, providing insightful suggestions. I would also like to thank Jimmy for his constant love, his ear to listen my ideas and his support throughout this course and for never allowing me to give up, this would not have been possible without him and I will always been grateful for everything he has done to make this possible.
+---
+[Go to top](#introduction)
