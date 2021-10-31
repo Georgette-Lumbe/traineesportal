@@ -57,6 +57,33 @@ This is the fourth of five milestone projects that the developer is required to 
 
 # UX
 
+## User Stories
+
+### First Time User goals
+
+* As a first time user, I want to see the main functions of the site
+* As a first time user, I want to be able to easily navigate throughout the site to find content
+* As a first time user, I want to read the blog post and see the comment
+
+### Returning User Goals
+
+* As a returning user, I want the site to be responsive across all devices.
+* As a returning user, I want to be able to create an account easily.
+* As a returning user, I want to be able to creates notes, assignments and tasks
+* As a returning user, I want to be able to see my profile
+
+### Frequent User Goals
+
+* As a frequent user,  I want to be able to login
+* As a frequent user, I want to see my notes, assignments and tasks
+* As a frequent user, I want to update my assignments and tasks
+* As a frequent user, I want to delete my unwanted data
+* As a frequent user, I want to check to see there are any blog posts
+
+### User Stories - Admin Only
+* As a site administrator, I want to be able to create, update and delete tasks, notes, assignments, blog posts.
+* As a site administrator, I want to be able to edit or delete coomments that may contain inappropriate content. 
+
 ## Development Planes
 
 ### Strategy
@@ -172,6 +199,9 @@ The developper met some issues during the development of the website, below are 
     * There was a error message about request: Unused argument 'request'.
     * The developer visited this [post](https://github.com/PyCQA/pylint-django/issues/155)
     * To this problem, the developer write an `underscore` before request.
+
+[Go to top](Introduction)
+---
 
 # Deployment
 
