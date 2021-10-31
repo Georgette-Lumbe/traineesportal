@@ -158,6 +158,20 @@ def tasks(request):
     return render(request, 'tasks.html', context)
 
 
+def update_task(request, pk=None):
+    """
+        When user hits checkbox
+        to mark task as completed
+    """
+    task = Tasks.objects.get(id=pk)
+    if task.is_finished:   # When user hits checkbox
+        task.is_finished = False
+    else:
+        task.is_finished = True
+    task.save()
+    return redirect('Tasks')
+
+
 def delete_task(request, pk=None):  # Delete assignment
     Tasks.objects.get(id=pk).delete()
     return redirect('tasks')

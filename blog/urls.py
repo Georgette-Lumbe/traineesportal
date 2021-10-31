@@ -19,6 +19,8 @@ urlpatterns = [
     path('tasks', views.tasks, name='tasks'),     # Tasks URL
     path('delete_task/<int:pk>', views.delete_task,
          name='delete-task'),
+    path('update_task/<int:pk>', views.update_task,
+         name='update-task'),
 
     path('post_one/<int:post_id>', views.post_one, name='post_one'),
 
