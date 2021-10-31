@@ -45,6 +45,16 @@ The live website can be viewed [here](#)
 
 # INTRODUCTION
 
+Trainee Portal is a site that facilitate all trainees to be more organised with all tasks they should have on their internship. Since during an internship, trainees very often have several notes to take about work operations, daily tasks to do as well as assignments to test their knowledge. On this, in Trainee Portal, trainees can write down all their notes, tasks and assignments which are well kept and protected. They will be able to update them whenever they want, as well as delete them once the task or assignment is finished. 
+
+Trainee Portal also has some blog posts, which are beneficial to the trainees before, during and even after their work placement. Since these blog posts teach them to work on their mindset, their relationship during the internship, some tips on how to behave and many more. On these blog posts, trainees can read and leave comments.
+
+Trainees must first sign up or register in order to create their information, to comment, and also to view their profile with all due assignments and tasks.
+
+There are many other site features which will be discussed in depth later on in this document.
+
+This is the fourth of five milestone projects that the developer is required to complete as part of their full web development course at the Code Institute.
+
 
 # UX
 
