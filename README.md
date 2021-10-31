@@ -190,19 +190,19 @@ The wireframe mockup links can be found below:
 
     <img src="" width="450" height="300" alt="task-page">
 
-9. Blog posts features
+10. Blog posts features
 
     * There are three blog posts, they contain picture, content and comment arrea.
 
     <img src="" width="450" height="300" alt="blog-posts-page">
 
-10. Message features
+11. Message features
 
     * Everytime that the user makes a successfully operation, there is successfully message appears at the top.
 
     <img src="" width="450" height="300" alt="success-message-page">
 
-11. Features exclusive to Admin
+12. Features exclusive to Admin
 
 * Only the Admin can edit/delete all content on the site. 
 
@@ -220,6 +220,69 @@ The scope of this project was quite large at its inception and decisions had to 
 ---
 
 # Technolgies Used
+
+1. [Python](https://www.python.org/) 
+    The following Python modules were used on this project:
+    - asgiref==3.4.1
+    - cloudinary==1.26.0
+    - dj-database-url==0.5.0
+    - dj3-cloudinary-storage==0.0.6
+    - Django==3.2.8
+    - django-allauth==0.45.0
+    - django-crispy-forms==1.13.0
+    - django-summernote==0.8.20.0
+    - gunicorn==20.1.0
+    - oauthlib==3.1.1
+    - psycopg2==2.9.1
+    - PyJWT==2.3.0
+    - python3-openid==3.2.0
+    - pytz==2021.3
+    - requests-oauthlib==1.3.0
+    - sqlparse==0.4.2
+2. [Django](https://docs.djangoproject.com/en/3.1/)
+    - Django was used as the main python framework in the building of this project.
+3. [jQuery](https://jquery.com/)
+    - This framework was used to create some of the site's interactive functions.
+4. [Gitpod](https://gitpod.io)
+    - This project was built using Gitpod as the IDE.
+5. [Github](https://github.com/)
+    - Github was used for online version control and storing files and documents.
+6. [Heroku](https://id.heroku.com/)
+    - Heroku was used as a cloud-based platform to deploy this site.
+7. [Google fonts](https://fonts.google.com/) 
+    - The font styles used on this website were chosen from Google fonts.
+8. [Bootstrap]()
+    - Various aspects of this website were structured using Materialize.
+    - Bootstrap was used to make this website responsive
+9. [Fontawesome](https://fontawesome.com/)
+    - The icons used on this page were found in Fontawesome.
+10. [Heroku Postgres](https://www.heroku.com/postgres)
+    - Heroku was used as the database for this project in production mode after deployment to Heroku.
+11. [Cloudinary]())
+    - Cloudinary was used to store all medias of this site.    
+12. [Balsamiq](https://balsamiq.com/)
+    - The wireframes for this project were created using Balsamiq.
+13. [Freeformatter- CSS beautifier](https://www.freeformatter.com/css-beautifier.html)
+    - This was used to format the CSS stylesheet.
+14. [Freeformatter- HTML formatter](https://www.freeformatter.com/html-formatter.html)
+    - This was used to format each HTML page
+15. [PEP8online](http://pep8online.com/)
+    - PEP8 online was used to make sure all python code was pep8 compliant.
+16. [Google DevTools](https://developers.google.com/web/tools/chrome-devtools) 
+    - Google Dev Tools was extensively used throughout the project for various styling and testing purposes. Its lighthouse feature was used as one of the main testing tools for this project.
+17. [Favicon.io](https://favicon.io/) 
+    - This was used to create the site's favicon.
+18. [Am I Responsive](http://ami.responsivedesign.is/)
+    - This was used to test the responsiveness of the site and also to create the mock-up image presented at the start of this document.
+19. - [Dbdiagram.io](https://dbdiagram.io/home)
+    - Dbdiagram.io was used to create the Database Schema presented in this document.
+20. [Coolors.co](https://coolors.co/)
+    - Coolors.co was used to create the project's color palette.
+21. [StackOverflow](https://stackoverflow.com/)
+    - Stack Overflow was used as a general reference resource.
+
+[Go to top](#introduction)
+---
 
 # Testing
 
@@ -387,13 +450,18 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 2. In Github go to the [respository](https://github.com/Georgette-Lumbe/traineesportal).
 3. In the top right hand corner click "Fork".
 
+[Go to top](#introduction)
 ---
 
-
-
-
-
 # Languages used
+
+This project is primarily built using:
+
+1.  HTML5 semantic markup
+2. CSS stylesheets
+3. Python
+4. Django
+5. Heroku Postgres.
 
 # Credits
 
