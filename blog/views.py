@@ -179,11 +179,22 @@ def delete_task(request, pk=None):  # Delete assignment
 
 def post_one(request, post_id):
     post = Post.objects.get(pk=post_id)
-    comments = post.comments.filter().order_by("-created_on")
+    comment = post.comments.filter().order_by("-created_on")
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.instance.email = request.user.email
+            form.instance.name = request.user.username
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+    else:
+        form = CommentForm()
     context = {
         "post": post,
-        "comments": comments,
-        "comment_form": CommentForm()
+        "comments": comment,
+        "comment": True,
+        "form": form,
         }
 
     return render(request, 'post_one.html', context)
