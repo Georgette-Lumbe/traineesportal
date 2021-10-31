@@ -22,7 +22,7 @@ urlpatterns = [
     path('update_task/<int:pk>', views.update_task,
          name='update-task'),
 
-    path('post_one/<int:post_id>', views.post_one, name='post_one'),
+    path('post_details/<int:post_id>', views.post_details, name='post_details'),  # noqa
 
     path('profile/', views.profile, name='profile'),  # Profile URL
 ]

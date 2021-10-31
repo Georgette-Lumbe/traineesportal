@@ -177,7 +177,7 @@ def delete_task(request, pk=None):  # Delete assignment
     return redirect('tasks')
 
 
-def post_one(request, post_id):
+def post_details(request, post_id):
     post = Post.objects.get(pk=post_id)
     comment = post.comments.filter().order_by("-created_on")
     if request.method == 'POST':
@@ -197,7 +197,7 @@ def post_one(request, post_id):
         "form": form,
         }
 
-    return render(request, 'post_one.html', context)
+    return render(request, 'post_details.html', context)
 
 
 @login_required
