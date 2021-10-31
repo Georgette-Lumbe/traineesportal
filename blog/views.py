@@ -25,7 +25,7 @@ def notes(request):
     Create notes view
     """
     if request.method == 'POST':  # When the save button is clicked
-        form = NotesForm(request.Post)
+        form = NotesForm(request.POST)
         if form.is_valid():  # If the value is valid
             note = Notes(
                 user=request.user,
@@ -40,7 +40,7 @@ def notes(request):
         form = NotesForm()
 
     note = Notes.objects.filter(user=request.user)
-    context = {'notes': notes, 'form': form}
+    context = {'notes': note, 'form': form}
     return render(request, 'notes.html', context)
 
 
@@ -93,7 +93,7 @@ def assignments(request):
         assignment_done = False
 
     context = {
-            'assignments': assignments,
+            'assignments': assignment,
             'assignment_done': assignment_done,
             'form': form
     }
@@ -101,18 +101,18 @@ def assignments(request):
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(request, post_id):
+def update_assignment(request, pk=None):
     """
         When user hits checkbox
         to mark assignment as completed
     """
-    assignment = Assignments.objects.get(pk=post_id)
+    assignment = Assignments.objects.get(id=pk)
     if assignment.is_finished is True:   # When user hits checkbox
         assignment.is_finished = False
     else:
         assignment.is_finished = True
     assignment.save()
-    return redirect('assignment')
+    return redirect('assignments')
 
 
 def delete_assignment(request, pk=None):  # Delete assignment
@@ -138,7 +138,7 @@ def tasks(request):
                 title=request.POST['title'],
                 is_finished=finished
             )
-            task.save()  # Save to database
+            task.save()  # Save to the database
             # Message when the assignment is added
             messages.success(request, f"Task from {request.user.username}"
                              " successfully added!")
@@ -151,7 +151,7 @@ def tasks(request):
     else:
         task_done = False
     context = {
-                'tasks': tasks,
+                'tasks': task,
                 'form': form,
                 'task_done': task_done
     }
@@ -175,20 +175,20 @@ def profile(request):
     """
     A view to return the user's profile page
     """
-    assignments = Assignments.objects.filter(
+    assignment = Assignments.objects.filter(
                     is_finished=False, user=request.user)
-    tasks = Tasks.objects.filter(is_finished=False, user=request.user)
-    if len(assignments) == 0:
+    task = Tasks.objects.filter(is_finished=False, user=request.user)
+    if len(assignment) == 0:
         assignment_done = True
     else:
         assignment_done = False
-    if len(tasks) == 0:
+    if len(task) == 0:
         task_done = True
     else:
         task_done = False
     context = {
-        'assignments': assignments,
-        'tasks': tasks,
+        'assignments': assignment,
+        'tasks': task,
         'assignment_done': assignment_done,
         'task_done': task_done
     }
