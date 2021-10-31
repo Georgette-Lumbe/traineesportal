@@ -25,7 +25,7 @@ footer {
 }
 
 .card {
-    box-shadow: 15px 15px 10px rgb(78, 77, 77);
+    box-shadow: 5px 5px 5px rgb(148, 147, 147);
 
 }
 
@@ -177,7 +177,7 @@ body {
 }
 
 .content-section {
-    background: #ffffff;
+    background: hsl(0, 0%, 100%);
     padding: 10px 20px;
     border: 1px solid #dddddd;
     border-radius: 3px;

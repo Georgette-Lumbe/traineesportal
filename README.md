@@ -215,9 +215,11 @@ The scope of this project was quite large at its inception and decisions had to 
 
 * Like, will be a attractive feature, so that user can see how many person likes the page and make blog posts more attractive.
 
-[Go to top](#introduction)
+* Alert message, whenever that user want to delete the data, he will nee to confirm the action.
 
 ---
+
+[Go to top](#introduction)
 
 # Technolgies Used
 
@@ -281,8 +283,9 @@ The scope of this project was quite large at its inception and decisions had to 
 21. [StackOverflow](https://stackoverflow.com/)
     - Stack Overflow was used as a general reference resource.
 
-[Go to top](#introduction)
 ---
+
+[Go to top](#introduction)
 
 # Testing
 
@@ -350,8 +353,9 @@ The developper met some issues during the development of the website, below are 
     * The developer visited this [post](https://github.com/PyCQA/pylint-django/issues/155)
     * To this problem, the developer write an `underscore` before request.
 
-[Go to top](#introduction)
 ---
+
+[Go to top](#introduction)
 
 # Deployment
 
@@ -450,8 +454,9 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 2. In Github go to the [respository](https://github.com/Georgette-Lumbe/traineesportal).
 3. In the top right hand corner click "Fork".
 
-[Go to top](#introduction)
 ---
+
+[Go to top](#introduction)
 
 # Languages used
 
