@@ -10,7 +10,7 @@ from . models import Assignments, Tasks, Post
 
 def homelist(request):
     """
-    Create homelist view
+    Create home view
     """
     posts = Post.objects.filter()  # Get the post id
     context = {
@@ -44,12 +44,18 @@ def notes(request):
     return render(request, 'notes.html', context)
 
 
-def delete_note(request, pk=None):  # Delete note
+def delete_note(_request, pk=None):
+    """
+    Delete note when user hits the trash button
+    """
     Notes.objects.get(id=pk).delete()
     return redirect("notes")
 
 
 class NotesDetailView(generic.DetailView):
+    """
+    Display note detail after user create a note
+    """
     model = Notes
 
 
@@ -80,7 +86,7 @@ def assignments(request):
             )
             assignment.save()
             # Message when the assignment is added
-            messages.success(request, f"Assignmnt from {request.user.username}"
+            messages.success(request, f"Assignment from {request.user.username}"  # noqa
                              " successfully added!")
     else:
         form = AssignmentForm()  # If the method is not POST
@@ -101,7 +107,7 @@ def assignments(request):
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(request, pk=None):
+def update_assignment(_request, pk=None):
     """
         When user hits checkbox
         to mark assignment as completed
@@ -115,13 +121,19 @@ def update_assignment(request, pk=None):
     return redirect('assignments')
 
 
-def delete_assignment(request, pk=None):  # Delete assignment
+def delete_assignment(_request, pk=None):
+    """
+    Delete assignment when user hits the trash button
+    """
     Assignments.objects.get(id=pk).delete()
     return redirect('assignments')
 
 
 @login_required
 def tasks(request):
+    """
+    Create Task view
+    """
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
@@ -158,7 +170,7 @@ def tasks(request):
     return render(request, 'tasks.html', context)
 
 
-def update_task(request, pk=None):
+def update_task(_request, pk=None):
     """
         When user hits checkbox
         to mark task as completed
@@ -172,12 +184,18 @@ def update_task(request, pk=None):
     return redirect('Tasks')
 
 
-def delete_task(request, pk=None):  # Delete assignment
+def delete_task(_request, pk=None):
+    """
+    Delete task when user hits the trash button
+    """
     Tasks.objects.get(id=pk).delete()
     return redirect('tasks')
 
 
 def post_details(request, post_id):
+    """
+    Create Post details view
+    """
     post = Post.objects.get(pk=post_id)
     comment = post.comments.filter().order_by("-created_on")
     if request.method == 'POST':
@@ -203,7 +221,7 @@ def post_details(request, post_id):
 @login_required
 def profile(request):
     """
-    A view to return the user's profile page
+    Create a profile view
     """
     assignment = Assignments.objects.filter(
                     is_finished=False, user=request.user)

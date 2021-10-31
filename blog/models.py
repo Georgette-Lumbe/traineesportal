@@ -25,7 +25,7 @@ class Post(models.Model):
     objects = models.Manager()
 
     def __str__(self):
-        return self.title
+        return str(self.title)
 
     class Meta:
         """
@@ -66,7 +66,7 @@ class Notes(models.Model):
     objects = models.Manager()
 
     def __str__(self):
-        return self.title  # Display the notes title
+        return str(self.title)  # Display the notes title
 
     class Meta:
         """
@@ -89,7 +89,7 @@ class Assignments(models.Model):
     objects = models.Manager()
 
     def __str__(self):  # Display the assignments title
-        return self.title
+        return str(self.title)
 
     class Meta:
         """
@@ -109,7 +109,7 @@ class Tasks(models.Model):
     objects = models.Manager()  # Object member
 
     def __str__(self):      # Display the tasks title
-        return self.title
+        return str(self.title)
 
     class Meta:
         """
