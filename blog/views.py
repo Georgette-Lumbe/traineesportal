@@ -107,7 +107,7 @@ def update_assignment(request, pk=None):
         to mark assignment as completed
     """
     assignment = Assignments.objects.get(id=pk)
-    if assignment.is_finished is True:   # When user hits checkbox
+    if assignment.is_finished:   # When user hits checkbox
         assignment.is_finished = False
     else:
         assignment.is_finished = True
@@ -156,6 +156,11 @@ def tasks(request):
                 'task_done': task_done
     }
     return render(request, 'tasks.html', context)
+
+
+def delete_task(request, pk=None):  # Delete assignment
+    Tasks.objects.get(id=pk).delete()
+    return redirect('tasks')
 
 
 def post_one(request, post_id):
