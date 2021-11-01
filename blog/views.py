@@ -1,4 +1,4 @@
-"""Modules"""
+"""Import Modules"""
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -108,7 +108,7 @@ def assignments(request):
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(_request, pk=None):
+def update_assignment(request, pk=None):
     """
         When user hits checkbox
         to mark assignment as completed
@@ -118,6 +118,11 @@ def update_assignment(_request, pk=None):
         assignment.is_finished = False
     else:
         assignment.is_finished = True
+    is_checked = request.POST.get("id=pk")
+    if is_checked:
+        assignment.is_finished = True
+    else:
+        assignment.is_finished = False
     assignment.save()
     return redirect('assignments')
 

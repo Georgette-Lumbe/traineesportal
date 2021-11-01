@@ -17,7 +17,7 @@ The live website can be viewed [here](https://traineesportal.herokuapp.com/)
             * [Existing Features](#Existing-Features) 
             * [Features Left To Implement](Feature-Left-To-Implement)
     * [Design](#Design)
-        *  [Colors](#Colors)
+        *  [Colour Scheme](#colour-scheme)
         * [Typography](#Imagery)
         * [Imagery](#Imagery)
 
@@ -129,86 +129,93 @@ The wireframe mockup links can be found below:
  1. Features on all pages
 
     * Navbar
-        - The navbar contains a conventionally placed logo at the top left of the page, if the user is not register, there are three buttons: Home, Register and login
+        - The navbar contains a conventionally placed logo at the top left of the page, if the user is not register, there are five buttons: Home, Profile, Options, Register and login
 
-        <img src="" width="450" height="300" alt="navbar-register-page">
+        <img src="documentation/screenshots/navbar.PNG" width="100%" height="100%" alt="navbar-login-page">
 
         - If the user login, there are four buttons: Home, Profile, Options which contains three personal options of the site and Logout.
 
-        <img src="" width="450" height="300" alt="navbar-login-page">
+        <img src="documentation/screenshots/navbar2.PNG" width="100%" height="100%" alt="navbar-login-page">
 
     * Footer
         - The footer contains the copyright
 
-        <img src="" width="450" height="300" alt="footer-page">
+        <img src="documentation/screenshots/footer.PNG" width="100%" height="100%" alt="footer-page">
 
 2. Home Page Features
 
     * There are six boxes representing the different options of the site: Notes, assignments, task lists and as a blog: Mindset, Relationship and Advice. They are all represented with a picture and a description.
 
-    <img src="" width="450" height="300" alt="home_page">
-
+    <img src="documentation/screenshots/home_page1.PNG" width="450" height="300" alt="home_page">
+    <img src="documentation/screenshots/home_page2.PNG" width="450" height="300" alt="home_page">
 
 3. Register Page Features
 
     * The Register button directs the user to the sign in page which asks the user to fill their username, email(optional), set the password and confirm it.
 
-    <img src="" width="450" height="300" alt="register-page">
+    <img src="documentation/screenshots/register.PNG" width="450" height="300" alt="register-page">
 
 4. Log In Page Features
 
     * The login button directs the user to the login page which asks the user to fill their username and password.
 
-    <img src="" width="450" height="300" alt="login-page">
+    <img src="documentation/screenshots/login.PNG" width="450" height="300" alt="login-page">
 
 5. Profile Page Features
 
     * A profile page is automatically created for the user once they have registered with the site. The profile form is automatically updated with the due information that the user put in the tasks and assignments. The user can update this information. Beneath the profile form there is a table with the user's personal information. There are tasks and assignments buttons that lead the user directly to the options wanted.
 
-    <img src="" width="450" height="300" alt="profile-page">
+    <img src="documentation/screenshots/profile.PNG" width="450" height="300" alt="profile-page">
 
 6. Log Out Features
 
     * The log out button directs the user to the signout page which asks the user to confirm that they wish to sign out.
 
-    <img src="" width="450" height="300" alt="Logout-page">
+    <img src="documentation/screenshots/logout.PNG" width="450" height="300" alt="Logout-page">
 
 7. Notes features
 
     * There is a form that the user should fill to create note and once the note created, it will appear above the form.
 
-    <img src="" width="450" height="300" alt="note-page">
+    <img src="documentation/screenshots/notes.PNG" width="450" height="300" alt="note-page">
 
 8. Assignments features
 
     * There is a form that the user should fill to create assignment and once the assignment created, it will appear in the table above the form.
 
-    <img src="" width="450" height="300" alt="assignement-page">
+    <img src="documentation/screenshots/assignments.PNG" width="450" height="300" alt="assignement-page">
 
 9. Task lists features
 
     * There is a form that the user should fill to create task and once the task created, it will appear in the table above the form.
 
-    <img src="" width="450" height="300" alt="task-page">
+    <img src="documentation/screenshots/tasks.PNG" width="450" height="300" alt="task-page">
 
 10. Blog posts features
 
     * There are three blog posts, they contain picture, content and comment arrea.
 
-    <img src="" width="450" height="300" alt="blog-posts-page">
+    <img src="documentation/screenshots/blog1.PNG" width="450" height="300" alt="blog-posts-page">
+    <img src="documentation/screenshots/blog2.PNG" width="450" height="300" alt="blog-posts-page">
 
-11. Message features
+11. Comment features
+
+    * The user can write a comment at the end of the blog post.
+
+    <img src="documentation/screenshots/comment.PNG" width="450" height="300" alt="comment-page">
+
+12. Message features
 
     * Everytime that the user makes a successfully operation, there is successfully message appears at the top.
 
-    <img src="" width="450" height="300" alt="success-message-page">
+    <img src="documentation/screenshots/message.PNG" width="450" height="300" alt="success-message-page">
 
-12. Features exclusive to Admin
+13. Features exclusive to Admin
 
 * Only the Admin can edit/delete all content on the site. 
 
 
-## Features Left To Implement
+#### Features Left To Implement
 
 The scope of this project was quite large at its inception and decisions had to be made to sacrifice certain content and features in order to meet the submission deadline. The following features will be explored and implemented at a later date:
 
@@ -216,7 +223,27 @@ The scope of this project was quite large at its inception and decisions had to 
 
 * Like, will be a attractive feature, so that user can see how many person likes the page and make blog posts more attractive.
 
-* Alert message, whenever that user want to delete the data, he will nee to confirm the action.
+* An error message, whenever that user want to delete the data, he will need to confirm the action.
+
+## Design
+
+1. Typography
+
+    * At the beginning of this project, the developer had opted for a combination of fonts many fonts but after more testing, he decided to change fonts and opted this time for a combination of [Acme](https://fonts.google.com/?query=acme) and [Lato](https://fonts.google.com/specimen/Lato) fonts which are used throughout the site, with Sans Sérif as a back-up font in case of import failure.
+
+2. Colour Scheme
+
+    * The colours used throughout the site for its main styling are shown below, this mix of colours comes from [coolors](https://coolors.co/) and they were chosen for a better design to maintain a simplified pleasure for the user.
+
+    * These colours are used in a specific and complementary way, maintain the simple design.
+
+    * There is a layer of red for when the user will hover the trash icon.
+
+    <img src="documentation/screenshots/colours.PNG" width="100%">
+
+3. Imagery
+
+    * All the images usedon the site was sourced from [unsplash](https://www.pinterest.com/pin/502855114653749177/).
 
 ---
 
@@ -299,7 +326,7 @@ The developper met some issues during the development of the website, below are 
 1. Git push Issue
 
     * The developer met an error while trying to push commit changes to github.
-    <img src="" width="">
+    <img src="documentation/screenshots/git_push_issue.PNG" width="450" height="300" width="">
 
     * To achieve this, the developer consulted the Code Institute Tutor Support. The problem was that the developer pushed a commit changes directly to github and gitpod breaks.
 
@@ -316,7 +343,6 @@ The developper met some issues during the development of the website, below are 
 2. Django admin
 
     * The django admin was working perfectly but without any style
-    <img src="" width="" alt="django-admin-issue>
 
     * The developer consulted the Code Institute Tutor Support, to achieve this. The problem was that DEBUG was equal to True in settings.py file. To resolve it, the developer put DEBUG = FALSE and remove DISABLE_COLLECTSTATIC to Heroku settings.
 
@@ -485,6 +511,8 @@ This project is primarily built using:
 
 * A large portion of this project's code was inspired by Matt Rudge's. This Code Institute tutorial was instrumental in the creation of this site.
 * [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) : Bootstrap library was used throughout the project mainly to make site responsive.
+* The css code about table media queries was taken on [Stack Overflow](https://stackoverflow.com/questions/52387423/make-table-responsive-on-mobile-devices-using-html-css)
+* [Nilesh](https://www.youtube.com/watch?v=XvU0QXqDQ1Y&t=6072s)
 
 # Acknowledgements
 
