@@ -1,3 +1,4 @@
+/*Import fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Lato:wght@300&display=swap');
 
 html {
@@ -27,10 +28,6 @@ header,
 
 main {
     font-family: 'Lato', sans-serif;
-}
-
-.example::-webkit-scrollbar {
-    display: none;
 }
 
 /*---------------------------- Headings*/
@@ -102,9 +99,10 @@ a:hover {
 
 /*------------------Messages*/
 .alert {
-    border: px solid #ccdef9d0;
+    border: 1px solid #ccdef9d0;
     background-color: #ccdef9d0;
 }
+
 /*---------------Read More anchor*/
 
 .read_more {
@@ -192,13 +190,14 @@ a:hover {
 .signup input {
     display: block;
     width: 100%;
-    border: 1px  solid;
+    border: 1px solid;
 }
 
-#id_login, #id_password {
+#id_login,
+#id_password {
     display: block;
     width: 50%;
-    border: 1px  solid;
+    border: 1px solid;
 }
 
 .link {
@@ -215,8 +214,10 @@ footer .dark-bg {
 
 /*------------------------------------------Media queries*/
 
-/*Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically. */ @media only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px) {
+/*Max width before this PARTICULAR table gets nasty. This query will take effect 
+for any screen smaller than 760px and also iPads specifically. Help from Slack */
+@media only screen and (max-width: 760px),
+(min-width: 768px) and (max-width: 1024px) {
 
     /* Force table to not be like tables anymore */
     table,
@@ -262,4 +263,3 @@ footer .dark-bg {
         white-space: nowrap;
     }
 }
-
