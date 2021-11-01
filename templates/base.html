@@ -9,14 +9,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--==========SEO Data==========-->
+  <meta name="description" content="A portal site allowing all trainees to create, update, delete data and, read blog">
+  <meta name="keywords" content="trainees, portal, inter, internship, traineeship, work placement, blog, post">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!--==========Bootstrap css==========-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!--==========Bootstrap bundle js==========-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
   </script>
+  <!--==========Font Awesome CDN import to allow usage of icons==========-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <!--==========Favicon==========-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--==========Link to access Static Style CSS file==========-->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -32,9 +41,11 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
+              <!--=======================Link to Home Page========================-->
               <a class="nav-link active" aria-current="page" href="{% url 'homelist' %}">Home</a>
             </li>
             <li class="nav-item">
+              <!--=======================Link to Profile Page========================-->
               <a class="nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
             <li class="nav-item dropdown">
@@ -42,6 +53,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 Options
               </a>
+              <!--=======================Link to differents options========================-->
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'notes' %}">Notes</a>
                 <div class="dropdown-divider"></div>
@@ -50,6 +62,7 @@
                 <a class="dropdown-item" href="{% url 'tasks' %}">Task Lists</a>
               </div>
             </li>
+            <!--=======================Link to authentification pages========================-->
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -82,7 +95,7 @@
 
   </main>
 
-  <!-- Footer-->
+  <!--=====================Footer========================-->
   <footer class="footer mt-auto py-3 dark-bg">
     <p class="m-0 text-center text-white">Trainee Portal</p>
   </footer>
