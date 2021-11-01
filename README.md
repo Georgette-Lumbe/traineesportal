@@ -97,35 +97,36 @@ Wireframes were created using [Balsamiq wireframes](https://balsamiq.com/)
 
 The wireframe mockup links can be found below:
 
-* [Home Page]()
+* Home Page
+<img src="documentation/wireframes/home_page.PNG" width="100%" alt="home_page">
 
-* [Profile Page]()
+* Login Page
+<img src="documentation/wireframes/login_page.PNG" width="100%" alt="login_page">
 
-* [Login Page]()
+* Register Page
+<img src="documentation/wireframes/register_page.PNG" width="100%" alt="register_page">
 
-* [Logout Page]()
+* Notes Page
+<img src="documentation/wireframes/notes_page.PNG" width="100%" alt="notes_page">
 
-* [Notes Page]()
+* Assignments Page
+<img src="documentation/wireframes/assignments_page.PNG" width="100%" alt="assignments_page">
 
-* [Assignments Page]()
+* Task lists Page
+<img src="documentation/wireframes/tasks_page.PNG" width="100%" alt="tasks_page">
 
-* [Tasks list Page]()
-
-* [Post 1 Page]()
-
-* [Post 2 Page]()
-
-* [Post 3 Page]()
+* Post 1 Page
+<img src="documentation/wireframes/posts_page.PNG" width="100%" alt="posts_page">
 
 #### Database Schema
 
-<img src="" width="">
+<img src="documentation/screenshots/trainees_portal_diagram.png" width="100%" alt="diagram">
 
 ### Structure
 
 #### Existing Features
 
- 1. Features on all pages**
+ 1. Features on all pages
 
     * Navbar
         - The navbar contains a conventionally placed logo at the top left of the page, if the user is not register, there are three buttons: Home, Register and login
