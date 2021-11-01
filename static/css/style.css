@@ -199,3 +199,15 @@ body {
 .account-heading {
     font-size: 2.5rem;
 }
+
+/*------------------------------------------------------Signup page*/
+.signup input {
+    display: block;
+    width: 40%;
+    border: 1px solid;
+}
+
+/*------------------------------------------Media queries up to 900px*/
+.signup input {
+    width: 60%;
+}
