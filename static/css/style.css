@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet|Quicksand|Barlow");
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lato:wght@300&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -6,67 +6,82 @@ html {
     width: 100%;
 }
 
-
-main {
-    font-family: Barlow, Quicksand, Rubik, sans-serif, serif, 'Times New Roman', Times, serif !important;
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
 }
 
-footer {
-    font-family: Rubik, sans-serif, serif, 'Times New Roman', Times, serif;
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+}
+
+header,
+.dark-bg {
+    font-family: 'Acme', sans-serif;
+}
+
+main {
+    font-family: 'Lato', sans-serif;
 }
 
 .example::-webkit-scrollbar {
     display: none;
 }
 
+/*---------------------------- Headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Acme', sans-serif;
+}
+
+/*---------------------------- Navbar*/
+
 .navbar {
-    background-color: rgb(0, 0, 0) !important;
-    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%) !important; */
+    background-color: #333333;
 }
 
-.card {
-    box-shadow: 5px 5px 5px rgb(148, 147, 147);
-
+.nav-link:hover {
+    background: #333333;
+    color: white;
+    transition: 0.7s ease;
 }
 
+/*---------------------------- Notes title*/
+.card-header {
+    background: #0E6CFC;
+    color: #FFFFFF;
+    transition: 0.3s ease-in;
+}
 
 .card-header:hover {
-    background: rgb(11, 22, 83) !important;
-    color: whitesmoke !important;
+    color: #FFFFFF;
+    background: #8A8A8A;
     transition: 0.1s ease-in;
 }
 
+/*---------------------------- Links*/
+
 a {
-    text-decoration: none !important;
-    color: black;
+    text-decoration: none;
+    color: #333333;
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
-}
-
-
-
-.custom-header:hover {
-    background: rgb(143, 189, 186) !important;
-}
-
-.card-header {
-    color: black !important;
-    background: rgb(152, 214, 230) !important;
-    transition: 0.3s ease-in;
-
-}
-
-.nav-link:hover {
-    background: black !important;
-    color: white !important;
-    transition: 0.7s ease;
+    color: #0E6CFC;
 }
 
 .icon-bar {
-    color: black;
+    color: #333333;
 }
 
 .card h4 {
@@ -85,55 +100,40 @@ a:hover {
     line-height: 10px;
 }
 
+/*------------------Messages*/
+.alert {
+    border: px solid #ccdef9d0;
+    background-color: #ccdef9d0;
+}
+/*---------------Read More anchor*/
 
-.button {
-    display: inline-block;
-    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+.read_more {
+    color: #0E6CFC;
+}
 
-    padding: .8em 1.4em;
-    padding-right: 4.7em;
-    background: #009ED8;
+/*---------------Buttons*/
+
+.btn-outline-info {
+    text-align: center;
+    float: left;
+    background: #0E6CFC;
     border: none;
     color: white;
+}
+
+.btn:hover {
+    background: #333333;
+    color: white;
+    border: 1px solid white;
 }
 
 .card img {
     height: 210px;
 }
 
-/* .card:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
-    transition: 0.5s ease;
-} */
+/*----------------------Images*/
 
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
-    /*background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)*/
-    overflow-x: hidden;
-    background-repeat: no-repeat;
-}
-
-.author {
-    color: rgb(126, 108, 108);
-    margin: 4px;
-}
-
-.card-header {
-    background-color: rgb(133, 204, 231);
-}
-
-
-
-.myimage {
+.card-img-top {
     opacity: 1;
     display: block;
     transition: .5s ease;
@@ -144,7 +144,6 @@ body {
     opacity: 0.9;
     transform: scale(1.02);
     transition: 0.2s ease;
-
 }
 
 .col-md-3 .card {
@@ -153,27 +152,28 @@ body {
 
 }
 
-.btn:hover {
-    background: black;
-    color: white;
-    border: 0.5px solid white;
+.border-bottom {
+    font-family: 'Acme', sans-serif;
+}
+
+/*----------------------------------Table input*/
+.controls input,
+.textarea {
+    width: 100%;
+}
+
+/*---------------- Icons*/
+
+.fa {
+    color: #FFFFFF;
 }
 
 .fa:hover {
     color: red;
-
-}
-
-.fa {
-    color: black;
-}
-
-.profa {
-    color: black;
 }
 
 .dark-bg {
-    background-color: black
+    background-color: #333333
 }
 
 .content-section {
@@ -184,30 +184,82 @@ body {
     margin-bottom: 20px;
 }
 
-/* 
-.content-section a:hover {
-    background: red;
-} */
-
-.account-img {
-    height: 125px !important;
-    width: 125px !important;
-    margin-right: 20px;
-    margin-bottom: 16px;
-}
-
-.account-heading {
-    font-size: 2.5rem;
+.card-footer {
+    background-color: #8A8A8A;
 }
 
 /*------------------------------------------------------Signup page*/
 .signup input {
     display: block;
-    width: 40%;
-    border: 1px solid;
+    width: 100%;
+    border: 1px  solid;
 }
 
-/*------------------------------------------Media queries up to 900px*/
-.signup input {
-    width: 60%;
+#id_login, #id_password {
+    display: block;
+    width: 50%;
+    border: 1px  solid;
 }
+
+.link {
+    color: #0E6CFC;
+}
+
+/* 
+footer .dark-bg {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+} */
+
+/*------------------------------------------Media queries*/
+
+/*Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically. */ @media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin: 0 0 1rem 0;
+    }
+
+    tr:nth-child(odd) {
+        background: #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+}
+

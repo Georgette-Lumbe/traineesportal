@@ -73,8 +73,7 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <h3>Add a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h2>Add a comment:</h2>
                 <form method="POST" style="margin-top: 1.3em;">
                     {{ form | crispy }}
                     {% csrf_token %}

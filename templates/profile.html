@@ -23,7 +23,7 @@
                     <th scope="row">{{forloop.counter}}</th>
                     <td>{{task.title}}</td>
                     <td>
-                        <a href="{% url 'update-task' task.id %">
+                        <a href="{% url 'update-task' task.id %}">
                             <div class="form-check">
                                 {% if task.is_finished == True %}
                                 <input class="form-check-input" type="checkbox" value="" checked>
@@ -37,7 +37,7 @@
                         </a>
                     </td>
 
-                    <td><a href="#"><i class="fa fa-trash fa-2x"></i></a></td>
+                    <td><a href="{% url 'update-task' task.id %}"><i class="fa fa-trash fa-2x"></i></a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -46,10 +46,10 @@
         <h3>All Tasks are completed!!!!</h3>
     {% endif %}
 
-        <a href="{% url 'tasks' %}" class="btn btn-danger">Task</a>
+        <a href="{% url 'tasks' %}" class="btn btn-outline-info">Task</a>
         <br><br>
 
-        <!-- Homework section-->
+        <!--====================Assignments section=====================-->
         {% if not assignment_done %}
         <h2>Due Assignments</h2>
         <table class="table table-striped table-bordered table-hover table-dark">
@@ -87,7 +87,7 @@
                             </div>
                         </a>
                     </td>
-                    <td><a href="#"><i class="fa fa-trash fa-2x"></i></a></td>
+                    <td><a href="{% url 'update_assignment' assignment.id%}"><i class="fa fa-trash fa-2x"></i></a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -96,7 +96,7 @@
         <h3>All Assignments are completed!!!!</h3>
         {% endif %}
 
-        <a href="{% url 'assignments' %}" class="btn btn-danger">Assignment</a>
+        <a href="{% url 'assignments' %}" class="btn btn-outline-info">Assignment</a>
     </div>
 </section>
 
