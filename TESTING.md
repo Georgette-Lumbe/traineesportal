@@ -139,33 +139,38 @@
 
 * style.css
 
-<img src="" width="100%">
+<img src="documentation/testing/css_validator.PNG" width="100%">
 
 4. P8P online was used to validate the Python code used
 
 * views.py
 
-<img src="" width="100%">
+<img src="documentation/testing/views_test.PNG" width="100%">
 
 * models.py
 
-<img src="" width="100%">
+<img src="documentation/testing/models_test.PNG" width="100%">
 
 * forms.py
 
-<img src="" width="100%">
+<img src="documentation/testing/forms_test.PNG" width="100%">
 
 * urls.py(blog)
 
-<img src="" width="100%">
+<img src="documentation/testing/urls_app_test.PNG" width="100%">
 
 * urls.py(traineesportal)
 
-<img src="" width="100%">
+<img src="documentation/testing/urls_test.PNG" width="100%">
 
 * admin.py
 
-<img src="" width="100%">
+<img src="documentation/testing/admin_test.PNG" width="100%">
+
+* settings.py
+
+There is more details on the Issues and bugs in the README.md file.
+<img src="documentation/testing/settings_test.PNG" width="100%">
 
 ## Browser Validation
 
