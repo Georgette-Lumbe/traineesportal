@@ -384,6 +384,10 @@ The developper met some issues during the development of the website, below are 
     * The developer visited this [post](https://github.com/PyCQA/pylint-django/issues/155)
     * To this problem, the developer write an `underscore` before request.
 
+8. Except 
+
+    * The developer met a problem with the try and except, the error was: **do not use bare except**
+    * To resolve this problem, the developer visit [Real Python](https://realpython.com/python-keyerror/), and just add `KeyError() after except.
 ---
 
 [Go to top](#introduction)

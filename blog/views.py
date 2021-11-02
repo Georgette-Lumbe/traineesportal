@@ -74,7 +74,7 @@ def assignments(request):
                     finished = True
                 else:
                     finished = False
-            except:
+            except KeyError():
                 finished = False
 
             assignment = Assignments(
@@ -162,7 +162,7 @@ def tasks(request):
                     finished = True
                 else:
                     finished = False
-            except:
+            except KeyError():
                 finished = False
             task = Tasks(
                 user=request.user,
