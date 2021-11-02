@@ -192,10 +192,6 @@
 
 <img src="documentation/testing/notes_test.PNG" width="100%">
 
-* notes_details.html
-
-<img src="" width="100%">
-
 * assignments.html
 
 <img src="documentation/testing/assignments_test.PNG" width="100%">

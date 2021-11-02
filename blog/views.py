@@ -108,36 +108,25 @@ def assignments(request):
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(request, pk=None):
+def update_assignment(_request, pk=None):
     """
         When user hits checkbox
         to mark assignment as completed
     """
     assignment = Assignments.objects.get(id=pk)
-    if assignment.is_finished:   # When user hits checkbox
-        assignment.is_finished = False
-    else:
-        assignment.is_finished = True
-    is_checked = request.POST.get("is_checked")
-    if is_checked:
-        assignment.is_finished = True
-    else:
-        assignment.is_finished = False
+    assignment.is_finished = True if assignment.is_finished is False else False
     assignment.save()
+    # is_checked = request.POST.get('is_checked', False)
+    # if is_checked in request.POST:
+    #     is_checked = request.POST['is_checked']
+    #     if is_checked:
+    #         assignment.is_finished = True
+    #     else:
+    #         assignment.is_finished = False
+    # else:
+    #     is_checked = False
+    # assignment.save()
     return redirect('assignments')
-
-#    if request.method == "POST":
-#        is_checked = "on":
-#       if request.form.get("is_checked")
-#    else: "off"
-#   task = {
-#        "category_name": request.form.get("category_name"),
-#        "task_name": request.form.get("task_name"),
-#        "task_description": request.form.get("task_description"),
-#        "is_finished": is_finished,
-#        "due_date": request.form.get("due_date"),
-#        "created_by": session["user"]
-#    }
 
 
 def delete_assignment(_request, pk=None):
@@ -195,12 +184,9 @@ def update_task(_request, pk=None):
         to mark task as completed
     """
     task = Tasks.objects.get(id=pk)
-    if task.is_finished:   # When user hits checkbox
-        task.is_finished = False
-    else:
-        task.is_finished = True
+    task.is_finished = True if task.is_finished is False else False
     task.save()
-    return redirect('Tasks')
+    return redirect('tasks')
 
 
 def delete_task(_request, pk=None):

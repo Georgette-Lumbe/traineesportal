@@ -368,23 +368,21 @@ The developper met some issues during the development of the website, below are 
     * get all fields for each post with post.fieldname
     * update the url to use post.id
 
-5. Update Information
+5. Unfixed Issue
 
-    * 
-
-6. Unfixed Issue
+    * Notes details: The developer encountered issue to display notes information on the notes_detail.html lack of time.
 
     * Likes: The developer had issues to permit user to like and unlike. So, the developer decide to remove this option and just leave the comment option.
 
     * Settings.py: The pep8 online validator shows some error `line too long`, the developer didn't fixed that because there are sensible informations.
 
-7. Request 
+6. Request 
 
     * There was a error message about request: Unused argument 'request'.
     * The developer visited this [post](https://github.com/PyCQA/pylint-django/issues/155)
     * To this problem, the developer write an `underscore` before request.
 
-8. Except 
+7. Except 
 
     * The developer met a problem with the try and except, the error was: **do not use bare except**
     * To resolve this problem, the developer visit [Real Python](https://realpython.com/python-keyerror/), and just add `KeyError() after except.
