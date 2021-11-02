@@ -392,6 +392,11 @@ The developper met some issues during the development of the website, below are 
     * The developer encountered an issue when he tried to put the site deployed on the am I responsive to check the site responsive but there was this message: *The website that you're trying to view on Am I Responsive has X-frame Options set to Same Origin or Deny. This isn't great for the tool, but it is great thng for a more secure web*
 
     * The developer installed then the [Ignore X-Frame headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe/related) extension in chrome and set the `class=hide` intead of `class=show` in Chrome Dev tools.
+
+10. Post_details.html
+
+    * The developer encountered an issue when trying to pass the post_details file to the validator. The Html validator shows some css in this html file but there is no more css inside.
+    <img src="documentation/testing/post_details_test.PNG" width="100%">
 ---
 
 [Go to top](#introduction)

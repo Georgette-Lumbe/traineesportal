@@ -147,6 +147,10 @@
 
 ![](documentation/testing/gif/create_delete_assignment.gif)
 
+* Manual testing for update tasks and assignments :
+
+![](documentation/testing/gif/tasks_assignments_update.gif)
+
 * The responsiveness of assignments page
 
 ![](documentation/testing/gif/assignments_responsiveness.gif)
@@ -202,7 +206,8 @@
 
 * post_details.html
 
-<img src="" width="100%">
+Details in Issues and bugs in README file
+<img src="documentation/testing/post_details_test.PNG" width="100%">
 
 * profile.html
 
