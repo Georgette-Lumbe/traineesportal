@@ -5,12 +5,14 @@
 
 <head>
   <title>Trainees Portal</title>
+  {% block meta %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <!--==========SEO Data==========-->
   <meta name="description" content="A portal site allowing all trainees to create, update, delete data and, read blog">
   <meta name="keywords" content="trainees, portal, inter, internship, traineeship, work placement, blog, post">
+  {% endblock %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <!--==========Bootstrap css==========-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,7 +25,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
   <!--==========Favicon==========-->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
   <!--==========Link to access Static Style CSS file==========-->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
