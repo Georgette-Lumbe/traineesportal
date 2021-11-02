@@ -37,6 +37,8 @@
 
 * As a first time user, I want to be able to easily navigate throughout the site to find content
 
+    - At the top left, there is a logo which leads user back to the landing page with one click.
+
     - At the top right, there is a navbar buttons which leads user to each the main options of the site back to the in one click.
 
     - On each box, there are text as Read More, Notes, assignmenets an task lists that allow the user to go anywhere he wants.
@@ -94,8 +96,86 @@
 
 # Manual Testing
 
-## Common Elements Testing
+## Navbar
 
+* Manual testing for navbar :
+
+![](documentation/testing/gif/navbar.gif)
+
+
+* The responsiveness of home page
+
+![](documentation/testing/gif/home_responsiveness.gif)
+
+* Manual testing for the profile :
+
+![](documentation/testing/gif/profile.gif)
+
+* The responsiveness of profile page
+
+![](documentation/testing/gif/profile_responsiveness.gif)
+
+
+* Manual testing for signup :
+
+![](documentation/testing/gif/signup.gif)
+
+* The responsiveness of Signup page
+
+![](documentation/testing/gif/signup_responsiveness.gif)
+
+
+* Manual testing for logout and login :
+
+![](documentation/testing/gif/logout_login.gif)
+
+* The responsiveness of Sign in page
+
+![](documentation/testing/gif/login_responsiveness.gif)
+
+
+* Manual testing for notes (create and delete) :
+
+![](documentation/testing/gif/create_delete_note.gif)
+
+* The responsiveness of notes page
+
+![](documentation/testing/gif/notes_responsiveness.gif)
+
+
+* Manual testing for assignments (create and delete) :
+
+![](documentation/testing/gif/create_delete_assignment.gif)
+
+* The responsiveness of assignments page
+
+![](documentation/testing/gif/assignments_responsiveness.gif)
+
+
+* Manual testing for tasks (create and delete) :
+
+![](documentation/testing/gif/create_delete_task.gif)
+
+* The responsiveness of all tasks page
+
+![](documentation/testing/gif/tasks_responsiveness.gif)
+
+
+* Manual testing for blog post Mindset and comment :
+
+![](documentation/testing/gif/comment_mindset.gif)
+
+* Manual testing for blog post Relationship and comment :
+
+![](documentation/testing/gif/comment_relationship.gif)
+
+* Manual testing for blog post advice and comment :
+
+![](documentation/testing/gif/comment_advice.gif)
+
+* The responsiveness of all posts
+
+![](documentation/testing/gif/post_responsiveness.gif)
 
 # Automated Testing
 
@@ -113,7 +193,7 @@
 
 * notes.html
 
-<img src="" width="100%">
+<img src="documentation/testing/notes_test.PNG" width="100%">
 
 * notes_details.html
 
@@ -121,11 +201,11 @@
 
 * assignments.html
 
-<img src="" width="100%">
+<img src="documentation/testing/assignments_test.PNG" width="100%">
 
 * tasks.html
 
-<img src="" width="100%">
+<img src="documentation/testing/tasks_test.PNG" width="100%">
 
 * post_details.html
 
@@ -133,7 +213,7 @@
 
 * profile.html
 
-<img src="" width="100%">
+<img src="documentation/testing/profile_test.PNG" width="100%">
 
 2. W3C validator CSS service was used to validate the CSS code used.
 
@@ -176,19 +256,19 @@ There is more details on the Issues and bugs in the README.md file.
 
 1. Chrome
 
-<img src="" width="100%">
+<img src="documentation/testing/chrome.PNG" width="100%">
 
 2. Edge
 
-<img src="" width="100%">
+<img src="documentation/testing/edge.PNG" width="100%">
 
 3. Opera
 
-<img src="" width="100%">
+<img src="documentation/testing/opera.PNG" width="100%">
 
 4. Firefox
 
-<img src="" width="100%">
+<img src="documentation/testing/firefox.PNG" width="100%">
 
 ## Lighthouse Auditing
 
@@ -196,22 +276,27 @@ There is more details on the Issues and bugs in the README.md file.
 
 <details>
 <summary>Desktop</summary>
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
+<img src="documentation/testing/lighthouse_desktop1.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop2.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop3.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop4.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop5.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop6.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop7.PNG" width="100%">
+<img src="documentation/testing/lighthouse_desktop8.PNG" width="100%">
 </details>
 
 <details>
 <summary>Mobile</summary>
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
-<img src="" width="100%">
+<img src="documentation/testing/lighthouse_mobile1.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile2.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile3.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile4.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile5.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile6.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile7.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile8.PNG" width="100%">
+<img src="documentation/testing/lighthouse_mobile9.PNG" width="100%">
 </details>
 
 # User testing
@@ -220,7 +305,7 @@ Family members, Jimmy , were asked to review, test the the site to point out any
 
 The following changes were made after their testing:
 
-* 
-* 
+* Change the color and fonts of the site
+* Correct some spelling mistakes.
 
  [Go to top](#testing-user-stories "#Goto testing user stories")

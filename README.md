@@ -310,6 +310,8 @@ The scope of this project was quite large at its inception and decisions had to 
     - Coolors.co was used to create the project's color palette.
 21. [StackOverflow](https://stackoverflow.com/)
     - Stack Overflow was used as a general reference resource.
+22. [FreeConvert](www.freeconvert.com/convert/video-to-gif/)
+    - Free convert was used to convert video to gif.
 
 ---
 
