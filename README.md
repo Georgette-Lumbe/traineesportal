@@ -374,6 +374,8 @@ The developper met some issues during the development of the website, below are 
 
     * Likes: The developer had issues to permit user to like and unlike. So, the developer decide to remove this option and just leave the comment option.
 
+    * Settings.py: The pep8 online validator shows some error `line too long`, the developer didn't fixed that because there are sensible informations.
+
 7. Request 
 
     * There was a error message about request: Unused argument 'request'.

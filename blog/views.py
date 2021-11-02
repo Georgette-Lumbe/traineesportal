@@ -118,13 +118,26 @@ def update_assignment(request, pk=None):
         assignment.is_finished = False
     else:
         assignment.is_finished = True
-    is_checked = request.POST.get("id=pk")
+    is_checked = request.POST.get("is_checked")
     if is_checked:
         assignment.is_finished = True
     else:
         assignment.is_finished = False
     assignment.save()
     return redirect('assignments')
+
+#    if request.method == "POST":
+#        is_checked = "on":
+#       if request.form.get("is_checked")
+#    else: "off"
+#   task = {
+#        "category_name": request.form.get("category_name"),
+#        "task_name": request.form.get("task_name"),
+#        "task_description": request.form.get("task_description"),
+#        "is_finished": is_finished,
+#        "due_date": request.form.get("due_date"),
+#        "created_by": session["user"]
+#    }
 
 
 def delete_assignment(_request, pk=None):
