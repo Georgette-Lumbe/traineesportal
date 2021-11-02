@@ -183,13 +183,10 @@
 
 1. W3C Markup Validator service was used to validate the HTML code used.
 
-* base.html
 
-<img src="" width="100%">
+* index.html and base.html
 
-* index.html
-
-<img src="" width="100%">
+<img src="documentation/testing/index_test.PNG" width="100%">
 
 * notes.html
 

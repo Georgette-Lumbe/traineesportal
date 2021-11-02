@@ -1,6 +1,6 @@
 # Trainees Portal
 
-<img src="" width="">
+<img src="documentation/screenshots/am_i_responsive.PNG" width="100%" alt="responsive_image">
 
 The live website can be viewed [here](https://traineesportal.herokuapp.com/)
 
@@ -388,6 +388,12 @@ The developper met some issues during the development of the website, below are 
 
     * The developer met a problem with the try and except, the error was: **do not use bare except**
     * To resolve this problem, the developer visit [Real Python](https://realpython.com/python-keyerror/), and just add `KeyError() after except.
+
+9. Am I responsive 
+
+    * The developer encountered an issue when he tried to put the site deployed on the am I responsive to check the site responsive but there was this message: *The website that you're trying to view on Am I Responsive has X-frame Options set to Same Origin or Deny. This isn't great for the tool, but it is great thng for a more secure web*
+
+    * The developer installed then the [Ignore X-Frame headers](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe/related) extension in chrome and set the `class=hide` intead of `class=show` in Chrome Dev tools.
 ---
 
 [Go to top](#introduction)
