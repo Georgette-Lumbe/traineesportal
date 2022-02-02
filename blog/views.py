@@ -151,7 +151,7 @@ def tasks(request):
                     finished = True
                 else:
                     finished = False
-            except KeyError():
+            except KeyError:
                 finished = False
             task = Tasks(
                 user=request.user,
