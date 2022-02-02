@@ -1,5 +1,5 @@
-{% extends 'base.html' %} 
-{% load static %} 
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <section class="container text-center">
@@ -9,61 +9,70 @@
 
   <div class="row">
     <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277268/notes_chxhbj.jpg" alt="Notes image">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="{% url 'notes' %}"><strong>Notes</strong></a>
-            </h5>
-            <hr>
-            Create Notes to refer them later. They are stored permanently until deleted
-          </div>
+      <div class="card">
+        <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277268/notes_chxhbj.jpg"
+          alt="Notes image">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{% url 'notes' %}"><strong>Notes</strong></a>
+          </h5>
+          <hr>
+          Create Notes to refer them later. They are stored permanently until deleted
         </div>
+      </div>
     </div>
 
     <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277243/assignment_quevwz.jpg" alt="Assignment image">
-          <div class="card-body">
-            <h5 class="card-title ">
-              <a href="{% url 'assignments' %}"><strong>Assignments</strong></a>
-            </h5>
-            <hr>
-            Add assignments and their deadlines. They will be displayed prioritised by deadlines
-          </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277243/assignment_quevwz.jpg"
+          alt="Assignment image">
+        <div class="card-body">
+          <h5 class="card-title ">
+            <a href="{% url 'assignments' %}"><strong>Assignments</strong></a>
+          </h5>
+          <hr>
+          Add assignments and their deadlines. They will be displayed prioritised by deadlines
         </div>
+      </div>
     </div>
-    
+
     <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277251/to-do_wvyove.jpg" alt="To-do image">
-          <div class="card-body">
-            <h5 class="card-title ">
-              <a href="{% url 'tasks' %}"><strong>Task Lists</strong></a>
-            </h5>
-            <hr>
-            Add your task lists for your day and remove them as you finish
-          </div>
+      <div class="card">
+        <img class="card-img-top" src="https://res.cloudinary.com/azurlumbe/image/upload/v1635277251/to-do_wvyove.jpg"
+          alt="To-do image">
+        <div class="card-body">
+          <h5 class="card-title ">
+            <a href="{% url 'tasks' %}"><strong>Task Lists</strong></a>
+          </h5>
+          <hr>
+          Add your task lists for your day and remove them as you finish
         </div>
+      </div>
     </div>
   </div>
-  
-  <br><br><br>
+</section>
+<!--==============Create a visual separation with blog posts and others features==========-->
+<br>
+<section class="container text-center">
+    <h3>Blog Posts</h3>
+  <hr><br>
+
   <div class="row">
     {% for post in posts %}
     <div class="col-md-4 ">
-        <div class="card mt-20">
-          <img class="card-img-top" src="{{ post.featured_image.url }}" alt="Post image">
-          <div class="card-body">
-            <h5 class="card-title ">
-              <strong>{{post.title}}</strong>
-            </h5>
-            <hr>
-            {{post.excerpt}}
-            <br>
-            <a href="{% url 'post_details' post.id %}" class="read_more"><strong>Read More</strong></a>
-          </div>
+      <div class="card mt-20">
+        <img class="card-img-top" src="{{ post.featured_image.url }}" alt="Post image">
+        <div class="card-body">
+          <h5 class="card-title ">
+            <strong>{{post.title}}</strong>
+          </h5>
+          <hr>
+          {{post.excerpt}}
+          <br>
+          <a href="{% url 'post_details' post.id %}" class="read_more"><strong>Read More</strong></a>
         </div>
+      </div>
     </div>
     {% endfor %}
   </div>

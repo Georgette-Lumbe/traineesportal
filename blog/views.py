@@ -74,7 +74,7 @@ def assignments(request):
                     finished = True
                 else:
                     finished = False
-            except KeyError():
+            except KeyError:
                 finished = False
 
             assignment = Assignments(
