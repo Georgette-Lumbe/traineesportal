@@ -116,16 +116,6 @@ def update_assignment(_request, pk=None):
     assignment = Assignments.objects.get(id=pk)
     assignment.is_finished = True if assignment.is_finished is False else False
     assignment.save()
-    # is_checked = request.POST.get('is_checked', False)
-    # if is_checked in request.POST:
-    #     is_checked = request.POST['is_checked']
-    #     if is_checked:
-    #         assignment.is_finished = True
-    #     else:
-    #         assignment.is_finished = False
-    # else:
-    #     is_checked = False
-    # assignment.save()
     return redirect('assignments')
 
 

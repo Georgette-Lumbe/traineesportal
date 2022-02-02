@@ -31,9 +31,9 @@
                         <div class="form-check">
                             <!-- If the assignment is finished or not -->
                             {% if assignment.is_finished %}
-                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <input class="form-check-input checked" type="checkbox" value="" checked disabled>
                             {% else %}
-                            <input class="form-check-input" type="checkbox" value="">
+                            <input class="form-check-input" type="checkbox" value="" disabled>
                             {% endif %}
                             <button>Mark as Completed</button>
                         </div>
