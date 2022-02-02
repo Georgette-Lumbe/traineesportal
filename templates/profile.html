@@ -26,13 +26,11 @@
                         <a href="{% url 'update-task' task.id %}">
                             <div class="form-check">
                                 {% if task.is_finished == True %}
-                                <input class="form-check-input" type="checkbox" value="" checked>
+                                <input class="form-check-input" type="checkbox" value="" checked disabled>
                                 {% else %}
-                                <input class="form-check-input" type="checkbox" value="">
+                                <input class="form-check-input" type="checkbox" value="" disabled>
                                 {% endif %}
-                                <label class="form-check-label text-light" for="flexCheckDefault">
-                                    Mark as Completed
-                                </label>
+                                <button>Mark as Completed</button>
                             </div>
                         </a>
                     </td>
@@ -46,7 +44,7 @@
         <h3>All Tasks are completed!!!!</h3>
     {% endif %}
 
-        <a href="{% url 'tasks' %}" class="btn btn-outline-info">Task</a>
+        <a href="{% url 'tasks' %}" class="btn btn-outline-info profile">Add Task</a>
         <br><br>
 
         <!--====================Assignments section=====================-->
@@ -77,13 +75,11 @@
                         <a href="{% url 'update-assignment' assignment.id%}">
                             <div class="form-check">
                                 {% if assignment.is_finished == True %}
-                                <input class="form-check-input" type="checkbox" value="" checked>
+                                <input class="form-check-input" type="checkbox" value="" checked disabled>
                                 {% else %}
-                                <input class="form-check-input" type="checkbox" value="">
+                                <input class="form-check-input" type="checkbox" value="" disabled>
                                 {% endif %}
-                                <label class="form-check-label text-light" for="flexCheckDefault">
-                                    Mark as Completed
-                                </label>
+                                <button>Mark as Completed</button>
                             </div>
                         </a>
                     </td>
@@ -96,7 +92,7 @@
         <h3>All Assignments are completed!!!!</h3>
         {% endif %}
 
-        <a href="{% url 'assignments' %}" class="btn btn-outline-info">Assignment</a>
+        <a href="{% url 'assignments' %}" class="btn btn-outline-info">Add Assignment</a>
     </div>
 </section>
 

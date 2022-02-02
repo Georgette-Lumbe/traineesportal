@@ -397,6 +397,13 @@ The developper met some issues during the development of the website, below are 
 
     * The developer encountered an issue when trying to pass the post_details file to the validator. The Html validator shows some css in this html file but there is no more css inside.
     <img src="documentation/testing/post_details_test.PNG" width="100%">
+
+11. Signup
+
+    * The developer get an error when testing the signup page, after the user finished to fill the signup form, this error occurs: `ConnectionRefusedError at /accounts/signup/`. So, the developer fixed it by visiting [this post on Slack](https://stackoverflow.com/questions/57405472/connectionrefusederror-at-accounts-register). The developer added this in settings.py:
+        - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+        - ACCOUNT_EMAIL_VERIFICATION = "none"
+
 ---
 
 [Go to top](#introduction)
