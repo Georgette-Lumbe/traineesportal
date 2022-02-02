@@ -32,12 +32,13 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
+                {% if not user.is_authenticated %}
                 <div class="row">
                     <div class="col-1">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                        <a href="{% url 'account_login' %}"><strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
+                            {{ total_comments }}</strong></a>
                         {% endwith %}
                     </div>
                 </div>
@@ -49,6 +50,7 @@
             <hr>
         </div>
     </div>
+    {% else %}
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
@@ -71,6 +73,7 @@
                 {% endfor %}
             </div>
         </div>
+        
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 <h2>Add a comment:</h2>
@@ -81,6 +84,7 @@
                 </form>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
 
