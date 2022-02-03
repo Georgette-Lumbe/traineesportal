@@ -1,8 +1,7 @@
 """Import Modules"""
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.views import generic
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm, CommentForm
 from . models import Assignments, Tasks, Post
 
@@ -53,11 +52,16 @@ def delete_note(_request, pk=None):
     return redirect("notes")
 
 
-class NotesDetailView(generic.DetailView):
+def notes_detail(request, note_id):
     """
     Display note detail after user create a note
     """
-    model = Notes
+    note = get_object_or_404(Notes, pk=note_id)
+    context = {
+        "note": note,
+    }
+
+    return render(request, 'notes_detail.html', context)
 
 
 @login_required

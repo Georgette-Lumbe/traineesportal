@@ -8,7 +8,7 @@
         {% for note in notes %}
         <div class="col-md-3">
             <div class="card">
-                <a href="{% url 'notes-detail' note.id %}">
+                <a href="{% url 'notes_detail' note.id %}">
                     <div class="card-header">{{note.title}}</div>
                 </a>
                 <!-- slice:"0:100, display only 0 to 100 characters s-->

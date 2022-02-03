@@ -8,8 +8,7 @@ urlpatterns = [
 
     path('notes', views.notes, name='notes'),     # Notes URL
     path('delete_note/<int:pk>', views.delete_note, name='delete_note'),
-    path('notes_detail/<int:pk>', views.NotesDetailView.as_view(),
-         name='notes-detail'),
+    path('notes_detail/<int:note_id>', views.notes_detail, name='notes_detail'),  # noqa
 
     path('assignments', views.assignments, name='assignments'),  # Assignments
     path('delete_assignment/<int:pk>', views.delete_assignment,
