@@ -97,6 +97,8 @@ Wireframes were created using [Balsamiq wireframes](https://balsamiq.com/)
 
 The wireframe mockup links can be found below:
 
+1. Desktop
+
 * Home Page
 <img src="documentation/wireframes/home_page.PNG" width="100%" alt="home_page">
 
@@ -118,6 +120,54 @@ The wireframe mockup links can be found below:
 * Post 1 Page
 <img src="documentation/wireframes/posts_page.PNG" width="100%" alt="posts_page">
 
+2. Tablet
+
+* Home Page
+<img src="documentation/wireframes/home_tablet.png" width="100%" alt="home_page">
+
+* Login Page
+<img src="documentation/wireframes/login_tablet.png" width="100%" alt="login_page">
+
+* Register Page
+<img src="documentation/wireframes/signup_tablet.png" width="100%" alt="register_page">
+
+* Notes Page
+<img src="documentation/wireframes/notes_tablet.png" width="100%" alt="notes_page">
+
+* Assignments Page
+<img src="documentation/wireframes/assignments_tablet.png" width="100%" alt="assignments_page">
+
+* Task lists Page
+<img src="documentation/wireframes/tasks_tablet.png" width="100%" alt="tasks_page">
+
+* Post 1 Page
+<img src="documentation/wireframes/post_tablet.png" width="100%" alt="posts_page">
+
+3. Phone
+
+* Home Page
+<img src="documentation/wireframes/home_phone.png" width="100%" alt="home_page">
+
+* Login Page
+<img src="documentation/wireframes/login_phone.png" width="100%" alt="login_page">
+
+* Register Page
+<img src="documentation/wireframes/signup_phone.png" width="100%" alt="register_page">
+
+* Notes Page
+<img src="documentation/wireframes/notes_phone.png" width="100%" alt="notes_page">
+
+* Assignments Page
+<img src="documentation/wireframes/assignments_phone.png" width="100%" alt="assignments_page">
+
+* Task lists Page
+<img src="documentation/wireframes/tasks_phone.png" width="100%" alt="tasks_page">
+
+* Post 1 Page
+<img src="documentation/wireframes/post_phone.png" width="100%" alt="posts_page">
+
+
+
 #### Database Schema
 
 <img src="documentation/screenshots/trainees_portal_diagram.png" width="100%" alt="diagram">
@@ -136,11 +186,6 @@ The wireframe mockup links can be found below:
         - If the user login, there are four buttons: Home, Profile, Options which contains three personal options of the site and Logout.
 
         <img src="documentation/screenshots/navbar2.PNG" width="100%" height="100%" alt="navbar-login-page">
-
-    * Footer
-        - The footer contains the copyright
-
-        <img src="documentation/screenshots/footer.PNG" width="100%" height="100%" alt="footer-page">
 
 2. Home Page Features
 

@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.urls import path
 from . forms import Notes, NotesForm, AssignmentForm, TaskForm, CommentForm
 from . models import Assignments, Tasks, Post
 
@@ -120,7 +121,7 @@ def update_assignment(_request, pk=None):
     assignment = Assignments.objects.get(id=pk)
     assignment.is_finished = True if assignment.is_finished is False else False
     assignment.save()
-    return redirect('assignments')
+    return redirect('profile')
 
 
 def delete_assignment(_request, pk=None):
@@ -180,7 +181,7 @@ def update_task(_request, pk=None):
     task = Tasks.objects.get(id=pk)
     task.is_finished = True if task.is_finished is False else False
     task.save()
-    return redirect('tasks')
+    return redirect('profile')
 
 
 def delete_task(_request, pk=None):

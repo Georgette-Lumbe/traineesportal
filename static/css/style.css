@@ -204,12 +204,6 @@ a:hover {
     color: #0E6CFC;
 }
 
-footer {
-    clear: both;
-    position: relative;
-    height: 100px;
-}
-
 /*------------------------------------------Media queries*/
 
 /*Max width before this PARTICULAR table gets nasty. This query will take effect 
