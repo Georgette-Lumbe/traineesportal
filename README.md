@@ -39,7 +39,7 @@ The live website can be viewed [here](https://traineesportal.herokuapp.com/)
 
 # INTRODUCTION
 
-Trainee Portal is a site that facilitate all trainees to be more organised with all tasks they should have on their internship. Since during an internship, trainees very often have several notes to take about work operations, daily tasks to do as well as assignments to test their knowledge. On this, in Trainee Portal, trainees can write down all their notes, tasks and assignments which are well kept and protected. They will be able to update them whenever they want, as well as delete them once the task or assignment is finished. 
+Trainees Portal is a site that facilitate all trainees to be more organised with all tasks they should have on their internship. Since during an internship, trainees very often have several notes to take about work operations, daily tasks to do as well as assignments to test their knowledge. On this, in Trainee Portal, trainees can write down all their notes, tasks and assignments which are well kept and protected. They will be able to update them whenever they want, as well as delete them once the task or assignment is finished. 
 
 Trainee Portal also has some blog posts, which are beneficial to the trainees before, during and even after their work placement. Since these blog posts teach them to work on their mindset, their relationship during the internship, some tips on how to behave and many more. On these blog posts, trainees can read and leave comments.
 
@@ -224,38 +224,44 @@ The wireframe mockup links can be found below:
 
     <img src="documentation/screenshots/notes.PNG" width="450" height="300" alt="note-page">
 
-8. Assignments features
+8. Notes detail features
+
+    * After creating the note, user can seen in details the note created
+
+    <img src="documentation/screenshots/notes_detail.PNG" width="450" height="300" alt="note-page">
+
+9. Assignments features
 
     * There is a form that the user should fill to create assignment and once the assignment created, it will appear in the table above the form.
 
     <img src="documentation/screenshots/assignments.PNG" width="450" height="300" alt="assignement-page">
 
-9. Task lists features
+10. Task lists features
 
     * There is a form that the user should fill to create task and once the task created, it will appear in the table above the form.
 
     <img src="documentation/screenshots/tasks.PNG" width="450" height="300" alt="task-page">
 
-10. Blog posts features
+11. Blog posts features
 
     * There are three blog posts, they contain picture, content and comment arrea.
 
     <img src="documentation/screenshots/blog1.PNG" width="450" height="300" alt="blog-posts-page">
     <img src="documentation/screenshots/blog2.PNG" width="450" height="300" alt="blog-posts-page">
 
-11. Comment features
+12. Comment features
 
     * The user can write a comment at the end of the blog post.
 
     <img src="documentation/screenshots/comment.PNG" width="450" height="300" alt="comment-page">
 
-12. Message features
+13. Message features
 
     * Everytime that the user makes a successfully operation, there is successfully message appears at the top.
 
     <img src="documentation/screenshots/message.PNG" width="450" height="300" alt="success-message-page">
 
-13. Features exclusive to Admin
+14. Features exclusive to Admin
 
 * Only the Admin can edit/delete all content on the site. 
 

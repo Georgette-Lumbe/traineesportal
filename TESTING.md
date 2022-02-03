@@ -142,6 +142,9 @@
 
 ![](documentation/testing/gif/notes_responsiveness.gif)
 
+* Note details
+
+<img src="documentation/screenshots/notes_detail.PNG" width="100%">
 
 * Manual testing for assignments (create and delete) :
 
@@ -195,6 +198,11 @@
 * notes.html
 
 <img src="documentation/testing/notes_test.PNG" width="100%">
+
+* notes_detail.html
+
+<img src="documentation/testing/notes_detail_test.PNG" width="100%">
+
 
 * assignments.html
 
