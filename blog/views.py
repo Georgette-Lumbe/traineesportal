@@ -109,10 +109,11 @@ def assignments(request):
             'form': form
     }
 
+    request.session['page_url'] = request.path
     return render(request, 'assignments.html', context)
 
 
-def update_assignment(_request, pk=None):
+def update_assignment(request, pk=None):
     """
         When user hits checkbox
         to mark assignment as completed
@@ -120,7 +121,7 @@ def update_assignment(_request, pk=None):
     assignment = Assignments.objects.get(id=pk)
     assignment.is_finished = True if assignment.is_finished is False else False
     assignment.save()
-    return redirect('profile')
+    return redirect(request.session["page_url"])
 
 
 def delete_assignment(_request, pk=None):
@@ -169,10 +170,12 @@ def tasks(request):
                 'form': form,
                 'task_done': task_done
     }
+
+    request.session['page_url'] = request.path
     return render(request, 'tasks.html', context)
 
 
-def update_task(_request, pk=None):
+def update_task(request, pk=None):
     """
         When user hits checkbox
         to mark task as completed
@@ -180,7 +183,7 @@ def update_task(_request, pk=None):
     task = Tasks.objects.get(id=pk)
     task.is_finished = True if task.is_finished is False else False
     task.save()
-    return redirect('profile')
+    return redirect(request.session["page_url"])
 
 
 def delete_task(_request, pk=None):
@@ -243,4 +246,5 @@ def profile(request):
         'task_done': task_done
     }
 
+    request.session['page_url'] = request.path
     return render(request, 'profile.html', context)
