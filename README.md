@@ -455,6 +455,13 @@ The developper met some issues during the development of the website, below are 
         - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
         - ACCOUNT_EMAIL_VERIFICATION = "none"
 
+12. Profile, assignments and tasks' redirections
+
+    * The developer encountered an issue while testing manually mark as completed in profile, assignments and tasks pages. Each time that he hit 'mark as completed' in assignements or tasks pages, he was redirected directly into the profile page, the same when he hit it in the profile page, he was redirected into the assignments/tasks page.
+    So, to fix this, the developer consulted the tutor support, James_ci and Scott_ci, adviced the developer to use the session variable.
+
+    In the profile, assignments and tasks views, before return, the developer add `request.session['page_url'] = request.path` and im update_task and update_assignment views `return redirect(request.session["page_url"])`.
+
 ---
 
 [Go to top](#introduction)
